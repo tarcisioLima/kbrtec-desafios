@@ -1,0 +1,394 @@
+
+html, body {
+	padding: 0;
+	margin: 0;
+}
+#wrapper {
+	width: 70%;
+	margin: 0 auto;
+}
+.fts-row {
+	background-color: #f8f8f8;
+	padding-top: 12px;
+	font-size: 12px;
+}
+.info-list {	
+		list-style: none;
+
+		li{
+			display: inline-block;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 300;
+
+			i{
+				margin-right: 10px;
+				margin-left: 15px;
+				color: #ff5e00;
+			}
+		}
+}
+
+.social-media-list {
+	list-style: none;
+	text-align: right;
+
+    li{
+		display: inline-block;
+		margin-right: 5px;
+		a {
+			color: #cbc8ce;
+		}
+	}
+}
+
+.listcol {
+	padding: 0px;
+}
+
+.main-list {
+	list-style: none;
+	padding: 0;  
+  margin-top: 20px;
+
+	li{
+		display: inline-block;
+		margin-right: 15px;
+			a{
+				text-transform: uppercase;
+				text-decoration: none;
+				color: #000;
+				font-family: 'Roboto', sans-serif;
+				font-weight: 500;
+				font-size: 12px;				
+				&:hover{
+					color: #ff5e00;
+				}
+			}	
+	}
+}
+header {
+	margin-top: 10px;
+	padding: 0px !important;
+
+	.item-carousel-half {
+		z-index: 2000;
+		position: absolute;		    
+    bottom: 0px;
+    left: 50%;
+	}
+}
+.carousel-indicators li {
+	  width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+		border: 1px solid #fff;
+		margin-bottom: 5px;
+		cursor: pointer;
+}
+ .carousel-indicators .active {
+		background-color: #ff5e00;
+		border: none;
+ }
+
+ .carousel-indicators {
+ 		display: inline-block;
+ 		right: 10px;
+ 		left: initial; 		
+ 		top: 50%;
+ }
+
+#slider {
+	position: relative;
+	font-family: 'Roboto', sans-serif;
+	color: #fff;	
+	
+	.carousel-item {
+		background-image: url(../images/header.png);
+		height: 450px;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+	}
+	.carousel-item .item-1 {
+		background-image: url('../images/header.png');
+	}
+
+	.conteudo-slide {
+		position: absolute;
+		z-index: 1200;
+		top: 20%;
+		left: 15%;
+		h1 {
+			
+			font-weight: bold;
+			text-transform: uppercase;
+			span { color: #ff5e00 }
+		}
+		.fst-span {
+			font-weight: 100;
+			text-transform: uppercase;
+		}
+		p {
+			font-family: 'Tahoma' sans-serif;
+			font-size: 14px;
+		}
+		.botoes button {			
+			color: #fff;
+			// border: none;
+			background-color: transparent; 
+			font-weight: 300;
+			cursor: pointer;
+			text-transform: uppercase;
+			border-radius: 2px;
+			font-size: 14px;
+			padding-left: 15px;
+			padding-right: 15px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+		.botoes button:first-child {
+				background-color: #ff5e00;
+				border: 1px solid #ff5e00;
+		}
+		.botoes button:last-child {
+			border: 1px solid #fff;
+		}
+	}
+}
+// Padrão repetitivo
+.h2-style{
+		font-family: 'Roboto', sans-serif;	
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 26px;
+		text-align: center;
+		span{
+			color: #ff5e00;
+		}
+	}
+
+.oque-oferecemos {
+		margin-top: 6%;
+		font-family: 'Roboto', sans-serif;
+	p{
+		font-weight: 300;
+		text-align: center;
+		margin-top: 3%;
+	}
+}
+
+.skills {
+	margin-top: 5%;
+	.circle {
+		text-align: center;
+		width: 100px;
+		height: 100px;
+		color: #ff5e00;
+		font-size: 2em;
+		border: 2px solid #ff5e00;
+		border-radius: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;		
+	}
+	p, .title-skill {
+		text-align: center;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	.title-skill {
+		font-weight: bold;
+		font-size: 18px;
+	}
+	p{
+		font-weight: 300;
+		font-size: 15px;
+	}
+	.fst-c {
+		background-color: #ff5e00;
+		color: #fff;
+		display: flex;
+		flex-flow: column;
+		flex-direction: center;
+
+		.inner-circle{
+			border: 2px solid #fff;
+			border-radius: 100%;
+			width: 90px;
+		  	height: 90px;
+		  	margin: auto;
+		  	display: flex;
+		  	flex-flow: column;
+			flex-direction: center;
+
+			i{
+				margin: auto;
+			}
+		}
+	}
+}
+.bg-cinza {
+	background-color: #f8f8f8;
+} 
+.destaque-projetos {
+	margin-top: 5%;
+	.mgt-top{
+		padding-top: 5%;
+	}
+	p {
+		margin-top: 3%;
+		text-align: center;
+		font-weight: 300;
+	}
+}
+
+.nav-fill {
+
+	.nav-item {
+		font-family: 'Roboto', sans-serif;
+		font-weight: 500;
+		text-transform: uppercase;
+		font-size: 14px;
+	}
+} 
+
+.nav-pills .nav-link.active, .show > .nav-pills .nav-link {
+	background-color: #ff5e00;
+}
+.nav-pills .nav-link {
+	color: #000;
+}
+
+.bg-white {
+	background-color: #fff;
+}
+
+.galeria-projetos {
+	.row{
+		margin-top: -1px;
+	}	
+	.col-xm-12, .col-sm-4, .col-md-3, .col-lg-3 {
+		padding-left: 0px;
+		padding-right: 0px;
+
+	}
+	figure{
+		position: relative;
+		// box-sizing: border-box;
+		// border: 1px solid black;
+		height: 250px;
+		margin:0px;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		align-items: center;
+		
+		a {
+			height: 100%;
+			width: 100%;
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		& a:hover .pelicula{
+			display: block;
+			transition: 0.8s;
+			transition-delay: 0.7s;
+		}
+
+		img {
+			height: 100%;
+			width: 100%;		
+		}
+		.pelicula {
+			position: absolute;
+			z-index:100;
+			border: 1px solid #fff;
+			width:95%;
+			height: 90%;
+			background-color: rgba(0,0,0, 0.4);		
+			display: none;
+			
+			figcaption {
+				text-align: center;
+				font-family: 'Roboto' sans-serif;
+				display: flex;	
+				height: 100%;	
+				flex-flow: column nowrap;
+				justify-content: center;
+				align-items: center;
+
+
+			.content {	
+				.titulo {
+					color: #fff;				
+					font-size: 14px;
+					font-weight: 500;	
+					// margin-top: 50%;	
+				}
+
+				p {
+					font-size: 12px;
+					font-weight: 300;
+					align-self: center;
+					color: #ffab31;
+					}
+				}
+			}	
+		}
+	}
+}
+.alinhamento {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.pp-servicos {
+	margin-top: 5%;
+
+	p {
+		margin-top: 3%;
+		text-align: center;
+		font-weight: 300;
+	}
+}
+	
+.bloco-servicos {
+	font-family: 'Roboto' sans-serif;
+	
+	.item-servicos {
+		min-height: 300px;		
+		padding-top: 3%;
+
+		.wrapper-item-servico { 
+			margin-left: 10%;
+			margin-right: 10%;
+		}
+		.fa {
+			font-size: 3em;
+			color: #ff5e00;			
+		}
+
+		.row > .col-12 {
+			text-align: center;
+			margin-bottom: 5%;
+		}
+
+		.titulo {
+			font-weight: 700;
+			color: #ff5e00;			
+		}
+		p{
+			margin-top: 3%;
+			text-align: justify;
+			font-weight: 300;
+		}
+	}
+}
