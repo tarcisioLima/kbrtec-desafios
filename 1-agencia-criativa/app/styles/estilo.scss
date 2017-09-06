@@ -1,7 +1,7 @@
 
-html, body {
-	padding: 0;
-	margin: 0;
+html, body, section {
+	padding: 0px;
+	margin: 0px;
 }
 #wrapper {
 	width: 70%;
@@ -503,6 +503,150 @@ header {
 	background-color: #2c1d3a;
 }
 
+
 .cliente {
+	 padding: 0px !important;
+}
+#carousel-cliente {
+	min-height: 350px;	
+	font-family: 'Roboto' sans-serif;	
+	.carousel-control-prev .carousel-control-prev-icon, .carousel-control-next .carousel-control-next-icon{
+		border: 1px solid #fd5d00;
+		// padding: 50px;			
+	}
+	.carousel-control-prev-icon, .carousel-control-next-icon {
+			color: #fd5d00;
+			background-image: none;
+			width: 30px;
+			height: 30px;
+	}
+
+	.carousel-inner {
+		height: 350px;
+	}
+	.carousel-inner .carousel-item {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			color: #fff;
+
+			& > div {				
+				overflow: hidden;
+				border-radius: 50%;
+				
+				img{
+					height: 128px;
+					width: 128px;
+				}
+
+			}
+			h4 {
+				font-weight: 700;
+				font-size: 15px;
+				padding-top: 20px;
+
+				span {				
+					color: #fd5d00;
+					font-style: italic;
+					position: relative;
+    			top: -9px;
+    			left: -5px;
+				}
+			}
+			p {
+				font-weight: 300;
+				font-size: 13px;
+				width: 80%;
+				text-align: center;
+			}
+	}
+}	
+
+.cases-sucesso {
+	font-family: 'Roboto' sans-serif;	
+	margin-top: 100px;
+	#wrapper {
+		width: 60%;
+	}
+	p {
+		text-align: center;
+		font-weight: 300;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		}
+}
+
+.cases {
+	margin-top: 50px;
+
+	#wrapper {
+		width: 80%;
+	}
+	ul {
+		list-style: none;
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;		
+		padding-bottom: 50px;
+			
+		li {
+			display: inline-block;
+			padding: 10px;
+			;
+		}
+	}
+}
+
+.solicitacao {
+	background-color: #fd3e15;
+	width: 100%;	
+	font-family: 'Roboto' sans-serif;	
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	min-height: 100px;
+	margin-top: 50px;
+
+	h4{
+		font-weight: 700;
+		color: #fff;
+		font-size: 18px;
+	}
+	button {
+		border: none;
+		background-color: #fff;
+		color: #fd3e15;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 14px;
+		padding: 0px 40px;
+		cursor: pointer;
+		border-radius: 5px;
+		height: 50px;
+		margin-left: 50px;
+	}
+}
+
+.conversar {
 	min-height: 300px;
+	margin-top: 50px;
+	font-family: 'Roboto' sans-serif;	
+
+	.endereco, .mensagem {
+		position: relative;
+		
+		.c-info {
+			color: #ff5e00;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			font-weight: 700;
+			font-size: 18px;
+		}
+
+	}
 }
