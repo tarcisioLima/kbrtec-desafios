@@ -3,6 +3,8 @@ html, body, section {
 	padding: 0px;
 	margin: 0px;
 }
+
+
 #wrapper {
 	width: 70%;
 	margin: 0 auto;
@@ -235,6 +237,7 @@ header {
 } 
 .destaque-projetos {
 	margin-top: 5%;
+	padding: 0px;
 	.mgt-top{
 		padding-top: 5%;
 	}
@@ -359,62 +362,6 @@ header {
 		font-weight: 300;
 	}
 }
-	
-// .bloco-servicos {
-// 	font-family: 'Roboto' sans-serif;
-	
-// 	.item-servicos {
-// 		max-height: 250px;		
-			
-
-// 		.wrapper-item-servico { 
-// 			padding-left: 10%;
-// 			padding-right: 10%;
-// 			height: 100%;
-
-// 		}
-// 		 // Quando o item for ativado
-// 		.active-item {
-// 			background-color: #f9f9f9;
-
-// 			// 	margin-left: 10%;
-// 			// margin-right: 10%;
-// 			padding: 5%; 
-// 			p{
-// 				font-size: 15px;
-// 				padding-left: 2%;
-//     			padding-right: 2%;		
-// 			}
-
-// 			.sub-active-item {
-// 				border: 1px solid #ff5e00;				
-// 				height: inherit;
-
-// 				.final-content {
-// 					margin-left: 10%;
-//     				margin-right: 10%;
-// 				}
-// 			}
-// 		}
-
-// 		.fa {
-// 			font-size: 3em;
-// 			color: #ff5e00;			
-// 		}
-
-// 		.row > .col-12 {
-// 			text-align: center;
-// 			margin-bottom: 5%;
-// 		}
-
-// 		.titulo {
-// 			font-weight: 700;
-// 			color: #ff5e00;
-// 			font-size: 18px;	
-// 		}
-		
-// 	}
-// }
 .b-white {
 	background-color: #fff;
 	margin-bottom: 5%;
@@ -422,7 +369,7 @@ header {
 
 .bloco-servicos {
 	 font-family: 'Roboto' sans-serif;	
-
+	 padding: 0px;
 	.item-servicos {
 	    padding-left: 15px;
     	padding-right: 15px;
@@ -636,17 +583,152 @@ header {
 	margin-top: 50px;
 	font-family: 'Roboto' sans-serif;	
 
-	.endereco, .mensagem {
-		position: relative;
-		
+	.endereco, .mensagem {	
 		.c-info {
-			color: #ff5e00;
-			position: absolute;
-			top: 0px;
-			left: 0px;
+			color: #fd3e15;			
 			font-weight: 700;
 			font-size: 18px;
+			padding-bottom: 10px;		
 		}
+	}
+	p, a {
+		font-size: 13px;
+	}
+	p {
+	 margin-top: 50px; 
+	 font-weight: 300;
+	}
+	p > a {
+		display: block;
+		margin-top: 10px;
+		font-weight: 500;
+	}
 
+	#mapa {
+		margin-top: 50px;
+		width: 100%;
+		height: 250px;
+	}
+
+	.mensagem {		
+		form {
+			margin-top: 50px;
+
+			input, textarea {
+				font-family: 'Roboto' sans-serif;	
+				font-weight: 300;
+				font-size: 15px;
+			}
+
+			button {
+				background-color: #fd3e15;
+				border: none;
+				cursor: pointer;
+				padding:  15px 40px 15px 40px;
+				font-weight: bold;
+				text-transform: uppercase;
+				color: #fff;
+				border-radius: 3px;
+			}
+		}
+		form .form-group {
+			margin-bottom: 25px;
+		}
 	}
 }
+
+footer {
+	background-color: #180428;
+	height: 350px;
+	position: relative;
+	font-family: 'Roboto' sans-serif;
+
+	& > div {		 
+	  height: 100%;
+	
+		p {
+			color: #fff;
+			text-align: center;
+			font-size: 14px;
+			font-weight: 300;
+		}
+
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: 50px;
+			padding-bottom: 20px;
+		}
+		.social-media-list-footer {
+			list-style: none;
+			margin: 0 auto;
+			display: block;
+			width: 200px;
+			margin-top: 30px;
+			& > li {			
+				display: inline-block;				
+				width: 30px;
+				padding: 5px;
+				margin-right: 5px;
+				border: 1px solid #f15f22;
+				a { text-decoration: none; }
+				 a > i {			
+					color: #f15f22;
+					display: block;
+					text-align: center;
+
+			}
+		}
+	}
+}
+	.down-footer {
+		min-height: 60px;
+		background-color: #1d082d;
+		position: absolute;
+		bottom: 0px;
+		z-index: 10;	
+		width: 100%;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+
+		img {
+			position: absolute;
+			right: 0px;
+			bottom: 0px;
+			height: 280px;
+		}
+
+		span {
+			 color: #fff;
+
+			font-weight: 300;
+			& > span {
+				color: #ff5e00;
+			}
+		}
+		nav {
+			display: inline;
+			margin-left: 250px;
+		}
+		nav ul {
+			list-style: none;
+			display: inline;
+			li {
+				display: inline-block;
+				margin-left: 5px;
+				a {
+					color: #fff;
+					font-size: 14px;
+					text-decoration: none;
+					&:hover {
+						color: #ff5e00;
+						transition: 1;
+					}
+				}
+			}
+		}
+	}
+}
+

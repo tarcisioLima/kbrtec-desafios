@@ -22,8 +22,7 @@
     
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
-
+    <!-- endbuild -->    
   </head>
   <body>
     <!--[if IE]>
@@ -518,19 +517,68 @@
         </div>
       </section>
 
-      <section class="container-fluid conversar">
+      <section class="container-fluid conversar pb-5">
         <div id="wrapper">
           <div class="row">
             <div class="col-md-6 endereco">
               <span class="c-info">Nosso Endereço</span>
+              <p>
+                Rua Doutor Carvalho de Mendonça, 224 - Vila belmiro - Santos São Paulo
+                <a href="#" target="_blank"> comercial@kbrtec.com.br </a>
+              </p>
+
+              <div id="mapa">My map will go here</div>
             </div>
             <div class="col-md-6 mensagem">
               <span class="c-info">Envie uma mensagem</span>
+              <form action="#">
+                <div class="form-group">                 
+                  <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>
+                </div>
+                <div class="form-group">                 
+                  <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
+                </div>
+                <div class="form-group">                 
+                  <input type="sujeito" class="form-control" id="sujeito" name="sujeito" placeholder="Sujeito">
+                </div>
+                 <div class="form-group">             
+                  <textarea class="form-control" id="exampleTextarea" rows="7"></textarea>
+                </div>
+                 <button type="submit">Enviar</button>
+              </form>
              </div>
           </div>
         </div>
       </section>
-
+      <footer class="up-footer">
+          <div>
+          <img src="images/logo2.png" class="" alt="Logo Kbr Tec.">
+            <p>
+                A libertação in ipsum Omare actualmente, a liberação in imperdiet
+                hendrerit suscipit presentes Destaques,<br> MA Houssain Ornare imperdiet
+                hendrerit dui suscipit apresentar.
+            </p>    
+             <ul class="social-media-list-footer">
+                <li><a href="#"><i class="fa fa-facebook"   dden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+          <section class="down-footer">            
+            <img src="images/footer.png" class="img-fluid" alt="detalhe do footer">
+             <div id="wrapper">
+             <span>&copy; 2017 por <span>Kbrtec</span>. Todos os direitos reservados.</span>
+            <nav>
+               <ul>
+                  <li> <a href="#"> Home </a></li>
+                  <li> <a href="#"> Sobre Nós </a></li>
+                  <li> <a href="#"> Atendimento </a></li>
+                </ul>
+               </div>
+             </nav>
+          </section>
+      </footer>
      <!-- FIM PAGINA -->
     
   
@@ -569,6 +617,7 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <script src="scripts/codes.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=meuMapa"></script> 
     <!-- endbuild -->
 
 
