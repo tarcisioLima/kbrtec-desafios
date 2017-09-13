@@ -39,12 +39,16 @@ html, body, section {
 		margin-right: 5px;
 		a {
 			color: #cbc8ce;
+			&:hover {
+				color: #ff5e00;
+				transition: 0.3s
+			}
 		}
 	}
 }
 .main-menu {
 	display: flex;
-	flex-flow: row;
+	flex-flow: row wrap;
 	justify-content: space-between;
 .listcol {
 	padding: 0px;
@@ -59,6 +63,7 @@ html, body, section {
 	li{
 		display: inline-block;
 		margin-right: 15px;
+		text-align: center;
 			a{
 				text-transform: uppercase;
 				text-decoration: none;
@@ -379,7 +384,7 @@ header {
     	padding-right: 15px;
    		padding-top: 10px;
     	padding-bottom: 10px;		
-		max-height: 220px;
+		// max-height: 220px;
 		// background-color: #f9f9f9;
 
 		&:hover {
@@ -416,6 +421,7 @@ header {
 			text-align: center;
 			padding: 10px;
 			position: relative; 
+			border: 1px solid transparent;
 
 			i { 			
 				font-size: 3em;
@@ -545,7 +551,7 @@ header {
 			
 		li {
 			display: inline-block;
-			padding: 10px;
+			padding: 20px;
 			;
 		}
 	}
@@ -742,13 +748,14 @@ max-width: value and down
 
 */
 
-@media (max-width: 1307px){
-  .main-list li {
-  	// margin-right: 5px;
-  }
-  .bloco-servicos .item-servicos {
-     max-height: 240px;
-  } 
+
+@media (max-width: 1332px){
+	.main-menu {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	}
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -759,4 +766,67 @@ max-width: value and down
   footer .down-footer nav {
   	margin-left: 150px;
   }
+  .cases ul {
+  	justify-content: center;
+  }
+}
+
+@media (max-width: 991px) {
+ .main-menu {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	}
+	.navbar-light .navbar-toggler {
+		margin-top: 20px;
+	}
+	.info-list, .social-media-list {
+		text-align: center;
+		// font-size: 13px;
+	}
+	.social-media-list li {
+		// margin-left: 10px;
+		font-size: 16px;
+	}
+	.nav-fill {
+		flex-flow: column;
+	}
+	
+}
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+	.mensagem {
+		margin-top: 30px;
+	}
+	.solicitacao {
+		padding: 20px;
+		
+		h4 {
+		 font-size: 22px;
+		 text-align: center;
+	   }
+		button {
+			margin-top: 15px;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.info-list li {
+		display: block;
+		font-size: 16px;
+		padding: 5px;
+	}
+	.social-media-list li {
+		font-size: 20px;
+		margin-left: 20px;
+	}
+	.cases ul {
+		justify-content: center;
+	    flex-flow: column;
+	    align-items: center;
+	}
+
+
 }

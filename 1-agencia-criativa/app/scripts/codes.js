@@ -1,4 +1,16 @@
 
+	
+
+
+$('.nav-pills .nav-item').click(function(e) {	
+	console.log($.each($('.nav-pills .nav-item').toArray(), function(i, v){
+		console.log(v);
+		$(v).removeClass("active");
+
+	}));	
+	return false;
+});
+
 
 function meuMapa() {
 	var map = new google.maps.Map(document.getElementById('mapa'), {
