@@ -1,16 +1,27 @@
 
-	
-
-
-$('.nav-pills .nav-item').click(function(e) {	
-	console.log($.each($('.nav-pills .nav-item').toArray(), function(i, v){
-		console.log(v);
-		$(v).removeClass("active");
-
-	}));	
-	return false;
+//Scroll
+$(document).scroll(function(){
+	let scroll = $(this).scrollTop();
+	scroll > 300 ? $('#go-to-top').fadeIn() : $('#go-to-top').fadeOut();	
 });
 
+$('#go-to-top').click(function(){
+	$('html,body').animate({ scrollTop: 0 }, 'slow');
+});
+
+
+$('.nav-fill .nav-item .nav-link').click(function(e) {
+	$('.nav-fill .nav-item .nav-link').removeClass('active');         
+    $(this).addClass('active');    
+    switchDataPills($(this).data('projeto-nome'));
+    return false;        
+});
+
+function switchDataPills(dataType) {
+   $('.galeria-projetos figure').hide();
+	dataType ===  'todos' ? $('.galeria-projetos figure').fadeIn() 
+						  : $(".galeria-projetos").find("[data-projeto-item='" + dataType + "']").fadeIn();	
+}
 
 function meuMapa() {
 	var map = new google.maps.Map(document.getElementById('mapa'), {

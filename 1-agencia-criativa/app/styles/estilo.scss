@@ -247,6 +247,7 @@ header {
 .destaque-projetos {
 	margin-top: 5%;
 	padding: 0px;
+	border-top: 1px solid #e1e1e1;
 	.mgt-top{
 		padding-top: 5%;
 	}
@@ -363,8 +364,7 @@ header {
 }
 
 .pp-servicos {
-	margin-top: 5%;
-
+	margin-top: 100px;
 	p {
 		margin-top: 3%;
 		text-align: center;
@@ -482,14 +482,16 @@ header {
 		height: 350px;
 	}
 	.carousel-inner .carousel-item {
+			height: 100%;
+			color: #fff;
+			& > div {
+			margin-top: 5%;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			height: 100%;
-			color: #fff;
-
-			& > div {				
+			}
+			& > div > div {				
 				overflow: hidden;
 				border-radius: 50%;
 				
@@ -546,13 +548,14 @@ header {
 		width: 100%;
 		display: flex;
 		flex-flow: row wrap;
-		justify-content: space-between;		
+		justify-content: space-between;
+		padding: 0px;
 		padding-bottom: 50px;
 			
 		li {
 			display: inline-block;
 			padding: 20px;
-			;
+			
 		}
 	}
 }
@@ -692,7 +695,8 @@ footer {
 		}
 	}
 }
-	.down-footer {
+
+.down-footer {
 		min-height: 60px;
 		background-color: #1d082d;
 		position: absolute;
@@ -810,6 +814,15 @@ max-width: value and down
 			margin-top: 15px;
 		}
 	}
+	.carousel-indicators {
+		right: -50px;
+	}
+	.item-carousel-half {
+		display: none;
+	}
+	footer .down-footer img {
+		display: none;
+	}
 }
 
 @media (max-width: 576px) {
@@ -827,6 +840,31 @@ max-width: value and down
 	    flex-flow: column;
 	    align-items: center;
 	}
+	.solicitacao button {
+		margin-left: 0px;
+	}
+	.cases-sucesso #wrapper {
+		width: 80%;
+	}
+}
 
-
+#go-to-top { 
+	display: none;
+	& > div {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	// color: #ff5e00;
+	color: #fff;
+	width: 30px;
+	height: 30px;
+	background-color: #ff5e00;	
+	border: 1px solid #ff5e00;
+	position: fixed;
+	right: 20px;
+	cursor: pointer;
+	bottom: 20px;
+	z-index: 1000;
+	}
 }
