@@ -114,22 +114,20 @@ header {
 	font-family: 'Roboto', sans-serif;
 	color: #fff;	
 	
-	.carousel-item {
-		background-image: url(../images/header.png);
-		height: 450px;
+	.carousel-inner {
+		min-height: 450px;
+		background-image: url('../images/header.png');
+		min-height: 450px;
 		background-size: cover;
 		background-repeat: no-repeat;
-
 	}
-	.carousel-item .item-1 {
-		background-image: url('../images/header.png');
-	}
+	.carousel-item {
+		margin-top: 50px;
+	}	
 
 	.conteudo-slide {
-		position: absolute;
 		z-index: 1200;
-		top: 20%;
-		left: 15%;
+	
 		h1 {
 			
 			font-weight: bold;
@@ -160,7 +158,7 @@ header {
 		}
 		.botoes button:first-child {
 				background-color: #ff5e00;
-				border: 1px solid #ff5e00;
+				border: 2px solid #ff5e00;
 		}
 		.botoes button:last-child {
 			border: 1px solid #fff;
@@ -483,7 +481,7 @@ header {
 	}
 
 	.carousel-inner {
-		height: 350px;
+		min-height: 350px;
 	}
 	.carousel-inner .carousel-item {
 			height: 100%;
@@ -702,25 +700,30 @@ footer {
 .down-footer {
 		min-height: 60px;
 		background-color: #1d082d;
-
+		display: flex;
+	    flex-flow: row wrap;
+	    justify-content: center;
+	    align-items: center;
 		img {
 			position: absolute;
 			right: 0px;
 			bottom: 0px;
 			height: 280px;
 		}
-
-		span {
-			color: #fff;
-			font-weight: 300;
-
+	
+		 & > img + #wrapper > div > div > span {
+			color: #fff;		
+			font-weight: 300;	
 			& > span {
 				color: #ff5e00;
 			}
 		}
-		nav {		
+		nav {
+		
 		  ul {
 			list-style: none;
+			margin: 0px;
+			padding: 0px;	
 			// display: inline;
 			li {
 				display: inline-block;
@@ -761,9 +764,7 @@ max-width: value and down
   .bloco-servicos .item-servicos {
      max-height: 240px;
   }
-  footer .down-footer nav {
-  	margin-left: 150px;
-  }
+ 
   .cases ul {
   	justify-content: center;
   }
@@ -837,22 +838,44 @@ max-width: value and down
 	.solicitacao button {
 		margin-left: 0px;
 	}
-	.cases-sucesso #wrapper {
-		width: 80%;
+
+	#wrapper, .cases-sucesso #wrapper {
+		width: 90%;
 	}
-	footer .down-footer {
+	footer .down-footer .row {
 		text-align: center;
+
+		div + nav {
+			margin-top: 5px;
+		}
 	}
-	footer .down-footer nav ul li {
-		display: block;
+
+	#carousel-cliente {
+		.controles {
+			min-width: 150px;
+		    margin: 0 auto;
+		    height: 80px;
+		}
+		.carousel-control-prev {
+			float: left;
+		}
+		.carousel-control-next {
+			float: right;
+		}
+		.carousel-control-prev, .carousel-control-next{
+			position: inherit;
+			display: block;
+		}
+
+		.carousel-control-prev-icon, .carousel-control-next-icon {
+			width: 50px;
+			height: 50px;
+		}		
 	}
-	footer .down-footer nav {
-  	  margin-left: 0px;
-  	  margin-top: 5px;
-  	  padding: 0px;
-  	  padding-bottom: 2px;
-  	 
-  }
+	// footer {
+	// 		display: none
+	// 	}
+	
 }
 
 #go-to-top { 
