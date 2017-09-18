@@ -677,8 +677,12 @@ footer {
 			list-style: none;
 			margin: 0 auto;
 			display: block;
-			width: 200px;
+			width: 150px;
 			margin-top: 30px;
+			display: flex;
+    		flex-flow: row wrap;
+    		justify-content: space-between;
+    		padding: 0px;
 			& > li {			
 				display: inline-block;				
 				width: 30px;
@@ -915,7 +919,9 @@ max-width: value and down
     		height: 20px;
 		}
 	}
-
+	.conversar .mensagem form button {
+		width: 100%;
+	}
 }
 
 #go-to-top { 
@@ -951,5 +957,6 @@ max-width: value and down
 	 img {
 		display: block;
 		margin: 0 auto;
-	}}
+		}
+	}
 }
