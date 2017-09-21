@@ -1,11 +1,10 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>2 grupo ciesa</title>
-
+    <title>Home - Grupo Ciesa</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
@@ -21,54 +20,102 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
   <body>
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active">
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-        <h3 class="text-muted">2 grupo ciesa</h3>
-      </div>
-
-      <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-          <h4>Sass</h4>
-          <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-
-          <h4>Modernizr</h4>
-          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
+   <!-- Navigation -->
+   <header class="container-fluid main-header">
+    <div class="wrapper">
+      <div class="row language-option">
+        <div>
+          <a href="#"><img src="images/brasil.png"></a>
+          <a href="#"><img src="images/australia.png"></a>
         </div>
       </div>
-
-      <div class="footer">
-        <p>♥ from the Yeoman team</p>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-principal" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+              <img class="img-responsive" alt="Logomarca da empresa grupo ciesa" src="images/logomarca.png">
+            </a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbar-collapse-principal">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Divisões e Serviços</a></li>
+              <li><a href="#">A empresa</a></li>
+              <li><a href="#">Localização</a></li>
+              <li><a href="#">Contatos</a></li>
+            </ul>
+        </div>
+      </nav>
       </div>
-    </div>
+      <!-- Slider -->
+      <div class="container-fluid" id="slider">        
+          <div id="main-slider" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+         <!--    <ol class="carousel-indicators">
+              <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+              <li data-target="#main-slider" data-slide-to="1"></li>
+              <li data-target="#main-slider" data-slide-to="2"></li>
+            </ol> -->
+            
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner wrapper">
+              <div class="item active">
+                <h1> Transportes <br> e serviços  </h1>
+                <p>
+                  Executamos o gerenciamento da logística de terceiros <br> no intuíto de reduzir os custos.                  
+                </p>
+                <button href="#"><span>Contratar</span> agora <img src="images/arrow-right.png" alt="seta para direita"></button>
+              </div>
+
+              <div class="item">
+                <h1> Comércio<br> e logística  </h1>
+                  <p>
+                    Executamos o gerenciamento da logística de terceiros <br> no intuíto de reduzir os custos.                  
+                  </p>
+                  <button><span>Contratar</span> agora <img src="images/arrow-right.png" alt="seta para direita"></button>
+                </div>
+                
+              <div class="item">
+              <h1> Operadora<br> Portuária </h1>
+                <p>
+                  Executamos o gerenciamento da logística de terceiros <br> no intuíto de reduzir os custos.                  
+                </p>
+                <button><span>Contratar</span> agora <img src="images/arrow-right.png" alt="seta para direita"></button>
+              </div>
+
+              </div>           
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#main-slider" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#main-slider" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+      </div>
+    
+  </header>
+
+
+
+
+  
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

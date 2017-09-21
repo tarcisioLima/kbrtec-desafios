@@ -1,92 +1,137 @@
 $icon-font-path: '../fonts/';
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-// endbower
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+//Cores
+$preto-claro:  #323846;
+$azul-medio: #2d4475;
 
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+/* Fonts: 
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+*/
+
+body, html, .container-fluid {
+  margin: 0px;
+  padding: 0px;
 }
 
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-/* Custom page header */
-.header {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-/* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
+/* Cabecalho */
+.main-header {
+  position: relative;
+  .language-option > div {
+    float: right;
   }
-}
-.container-narrow > hr {
-  margin: 30px 0;
-}
+  .navbar-default {
+    background-color: #fff;
+    border: none;
+  }  
+    nav {
+       font-family: 'Josefin Sans', sans-serif;
+       font-weight: 700;
+       font-size: 12px;
+       text-transform: uppercase;
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
-}
+      .navbar-brand {
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+    .navbar-collapse {     
+      padding-right: 0px; 
+      padding-left: 0px; 
+    }
+    .navbar-nav > .active {
+      border: 1px solid $azul-medio;
+   
+      
+      & > a {
+          background-color: #fff;
+          padding-top: 10px; 
+          padding-bottom: 0px;
+          height: 100%;
+          line-height: 30px; 
+          &:hover {
+            color: #fff;
+            background-color: $azul-medio;
+          }
+      } 
+    }
+    #navbar-collapse-principal {
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
-}
+        ul {
+          margin-top: 15px;
+          margin-left: 15px;        
+           li {
+              margin-left: 20px;
+           }
+        }
+      }
+    }
+ }
+ /*Slider*/
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
+ #main-slider {
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../images/slider-background.png');
+    color: #fff;
+
+    .carousel-inner > .item {
+      min-height: 100%;
+      
+      h1{
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        font-size: 6em;
+        text-transform: uppercase;
+      }
+      p {
+        background-color: $preto-claro;
+        width: 60%;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        padding: 15px 15px 30px 15px;
+        margin: 25px 0px 0px 0px;
+      }
+      button {
+        border: none;
+        background-color: #fff;
+        color: $preto-claro;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        padding: 10px;
+        font-size: 16px;
+        span {
+          font-weight: 700;          
+        }
+        img{
+          margin: -3px 20px 0px 15px;
+          width: 18px;
+          height: 10px;
+        }
+      }
+    }
+ }
+
+
+ header:after {    
+      background: url('../images/cloud.png');
+      height: 108px;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;      
+      position: absolute;
+      bottom: -40px;
+    } 
