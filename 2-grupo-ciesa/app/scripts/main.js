@@ -11,3 +11,16 @@ $('#main-slider').bind('slid.bs.carousel', function() {
 });
 
 $('.controls-slider > div .total').html('/0' + totalItems);
+
+// Menu
+$('.navegacao-expansivel').click(function(){
+	$(this).fadeOut();
+	
+})
+
+$('.navegacao .navegacao-principal .alternador').click(function(){
+	$('.overlay').fadeIn();
+	$('.navegacao-expansivel').show();
+
+});
+

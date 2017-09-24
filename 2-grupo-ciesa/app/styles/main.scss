@@ -66,13 +66,16 @@ body, html, .container-fluid, ul{
       width: 40px;
       height: 40px;
       margin-top: 20px;
+      font-size: 22px;
+      padding-top: 5px;
+      color: $azul-medio;
       display: none;
-      i {color: $azul-medio;}
   
     }
   }
   .navegacao-expansivel {
     height: 100%;
+    display: block;
   }
   .navegacao-lista {
     list-style: none;
@@ -81,16 +84,18 @@ body, html, .container-fluid, ul{
     justify-content: space-between;
     align-items: center;
     height: inherit;
-    
-    li {
-      display: inline-block;
       
-      
-      a {color: $preto-claro;  padding: 8px 15px 5px 15px;
-        
-        .ativo {
+    .ativo {
         border: 1px solid $azul-medio;
-    }
+      }
+
+    li {
+      display: inline-block;      
+      
+      a {
+        color: $preto-claro;  
+        padding: 8px 15px 5px 15px;
+        display: block;      
       }
       
         &:hover {
@@ -155,7 +160,7 @@ body, html, .container-fluid, ul{
     }
     .controls-slider {
       // background-color: red;
-      width: 200px;
+      width: 120px;
       height: 100px;
       margin-left: auto;
       margin-right: auto;
@@ -163,6 +168,10 @@ body, html, .container-fluid, ul{
       position: relative;
       text-align: center;
     
+      & > div {
+        padding-right: 15px;
+        padding-top: 5px;
+      }
       .current, .total {
         font-family: "Oswald", sans-serif;      
         display: inline;
@@ -195,7 +204,7 @@ body, html, .container-fluid, ul{
     }
    .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev, 
     .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev {
-       font-size: 20px;
+       font-size: 18px;
    }
  }
 
@@ -278,3 +287,50 @@ body, html, .container-fluid, ul{
     }
   }
 }
+
+// .overlay { 
+//   z-index: 1000;
+//   background-color: rgba(0,0,0,0.5);
+//   position: fixed;
+//   transform: translateZ(0);
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+// }
+
+/* Media queries */
+@media (max-width: 768px) {
+
+  .navegacao .navegacao-principal button{
+    display: block;
+  }
+  .navegacao .navegacao-expansivel {
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    transform: translateZ(0);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+
+    .navegacao-lista {
+      background-color: #fff;
+      width: 30%;
+      right: 0;
+      position: absolute;
+      display: block;
+      z-index: 1010;
+      .ativo {
+        background-color: $azul-medio;
+         a {color: #fff;}
+      }
+      li {
+        display: block;        
+      }
+    }
+  }  
+}
+
