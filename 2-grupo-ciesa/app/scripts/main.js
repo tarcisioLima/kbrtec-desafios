@@ -1,7 +1,7 @@
 
 
 //Items slider
-var totalItems = $('.item').length
+var totalItems = $('#main-slider .item').length;
 
 $('#main-slider').bind('slid.bs.carousel', function() {
 	

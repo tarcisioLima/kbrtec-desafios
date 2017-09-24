@@ -14,7 +14,20 @@ $azul-medio: #2d4475;
   font-family: 'Open Sans', sans-serif;
 */
 
-body, html, .container-fluid {
+/* Iguala o tamanho das colunas.*/
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:  flex;
+  flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+body, html, .container-fluid, ul{
   margin: 0px;
   padding: 0px;
 }
@@ -27,57 +40,74 @@ body, html, .container-fluid {
 /* Cabecalho */
 .main-header {
   position: relative;
-  .language-option > div {
-    float: right;
+  .language-option {
+    display: block;
+    div {
+      float: right;
+    }
   }
-  .navbar-default {
-    background-color: #fff;
-    border: none;
-  }  
-    nav {
-       font-family: 'Josefin Sans', sans-serif;
-       font-weight: 700;
-       font-size: 12px;
-       text-transform: uppercase;
+}
 
-      .navbar-brand {
-        height: 100%;
-        padding: 0px;
-        margin: 0px;
-    }
-    .navbar-collapse {     
-      padding-right: 0px; 
-      padding-left: 0px; 
-    }
-    .navbar-nav > .active {
-      border: 1px solid $azul-medio;
+.navegacao {
+   font-family: 'Josefin Sans', sans-serif;
+   font-weight: 700;
+   font-size: 12px;
+   text-transform: uppercase;
+   padding: 0px;
+   margin-bottom: 20px;
    
+  .navegacao-principal {
+    padding: 0px;
+    display: block;
+    button {
+      border: none;
+      float: right;
+      outline: none;
+      width: 40px;
+      height: 40px;
+      margin-top: 20px;
+      display: none;
+      i {color: $azul-medio;}
+  
+    }
+  }
+  .navegacao-expansivel {
+    height: 100%;
+  }
+  .navegacao-lista {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+    
+    li {
+      display: inline-block;
       
-      & > a {
-          background-color: #fff;
-          padding-top: 10px; 
-          padding-bottom: 0px;
-          height: 100%;
-          line-height: 30px; 
-          &:hover {
-            color: #fff;
-            background-color: $azul-medio;
-          }
-      } 
+      
+      a {color: $preto-claro;  padding: 8px 15px 5px 15px;
+        
+        .ativo {
+        border: 1px solid $azul-medio;
     }
-    #navbar-collapse-principal {
-
-        ul {
-          margin-top: 15px;
-          margin-left: 15px;        
-           li {
-              margin-left: 20px;
-           }
-        }
       }
+      
+        &:hover {
+          text-decoration: none;
+          color: #fff;
+          background-color: $azul-medio;
+        }
+         &:hover a {
+          
+          color: #fff;
+          text-decoration: none;
+        }
+        
     }
- }
- /*Slider*/
+  }
+}
+ /* Slider */
 
  #main-slider {
     height: 600px;
@@ -184,14 +214,14 @@ body, html, .container-fluid {
   position: relative;
   margin-top: -150px;
   .item {
--webkit-box-shadow: -2px 17px 28px 3px rgba(26,24,26,0.29);
--moz-box-shadow: -2px 17px 28px 3px rgba(26,24,26,0.29);
-box-shadow: -2px 17px 28px 3px rgba(26,24,26,0.29);
+    -webkit-box-shadow: -2px 17px 28px 3px rgba(26,24,26,0.29);
+    -moz-box-shadow: -2px 17px 28px 3px rgba(26,24,26,0.29);
+    box-shadow: -2px 17px 28px 3px rgba(26,24,26,0.29);
     width: 32%;
     margin-left: 1.333333%;
     padding: 0px;
     margin-bottom: 20px;
-  
+    background-color: #fff;
     }
   h2, p {
     padding: 10px;
@@ -212,7 +242,7 @@ box-shadow: -2px 17px 28px 3px rgba(26,24,26,0.29);
     }
   }
   
-  p{
+  p {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
   }
