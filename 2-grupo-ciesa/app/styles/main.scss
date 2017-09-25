@@ -37,6 +37,12 @@ body, html, .container-fluid, ul{
   margin: 0 auto;
 }
 
+.titulo-padrao {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 4em;
+  text-transform: uppercase;
+}
 /* Cabecalho */
 .main-header {
   position: relative;
@@ -103,8 +109,7 @@ body, html, .container-fluid, ul{
           color: #fff;
           background-color: $azul-medio;
         }
-         &:hover a {
-          
+         &:hover a {                   
           color: #fff;
           text-decoration: none;
         }
@@ -334,3 +339,82 @@ body, html, .container-fluid, ul{
   }  
 }
 
+.sobre-empresa-home {
+  background-image: url('../images/sobre-empresa-home.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 436px;
+  margin-top: 150px;
+  position: relative;
+  margin-bottom: 100px;
+  & * {
+    padding: 0px;
+  }
+  // display: flex;
+  // flex-flow: column wrap;
+  // justify-content: center;
+
+  &:after {
+    content: '';
+    background-image: url('../images/cloud.png');
+    background-repeat: no-repeat; 
+    height: 108px;
+    width: 100%;
+    position: absolute;
+    bottom: -50px;
+  }
+  .ano, .info {
+    padding-top: 100px;
+
+  }
+  .ano {
+    & > div  {
+      border-right: 1px solid rgba(255,255,255,0.2);
+      text-align: center;
+      text-align: right;
+      padding-right: 50px;
+      height: 150px;
+    }
+    h2 {
+      color: #fff;
+      font-size: 3em;
+      margin: 0px;
+    
+    }    
+    span {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 7em;
+      color: #fff;
+      // font-weight: 700;
+       opacity: 0.3;
+
+    }
+  }
+  .info {
+    padding-left: 30px;
+    p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      color: #fff;      
+    }
+     button {
+        margin-top: 20px;
+        border: none;
+        background-color: #fff;
+        color: $preto-claro;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        padding: 10px;
+        font-size: 16px;
+        span {
+          font-weight: 700;          
+        }
+        img{
+          margin: -3px 20px 0px 15px;
+          width: 18px;
+          height: 10px;
+        }
+      }
+    }
+  }
