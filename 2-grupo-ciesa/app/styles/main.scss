@@ -418,3 +418,42 @@ body, html, .container-fluid, ul{
       }
     }
   }
+
+.contato > .wrapper > .row {
+  display: flex;
+  flex-flow: column wrap;
+  
+  & + .row {
+    margin-bottom: 20px;  
+  }
+
+  h2, span {
+    text-align: center;    
+  }
+  h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 4em;
+    text-transform: uppercase;
+    color: $preto-claro;
+  }
+  span {
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    &:after {
+      content: ' ';
+      width: 50px;
+      height: 2px;
+      background-color: #2d4475;    
+      display: block;
+      margin: 10px auto 0px auto;
+    }
+  }
+}
+
+.contato .form-inline {
+    .form-control {
+      width: 100%;
+    }
+}
+
