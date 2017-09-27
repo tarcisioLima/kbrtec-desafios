@@ -32,6 +32,9 @@ body, html, .container-fluid, ul{
   padding: 0px;
 }
 
+ul {
+  list-style: none;
+}
 .wrapper {
   width: 70%;
   margin: 0 auto;
@@ -304,7 +307,7 @@ body, html, .container-fluid, ul{
 //   left: 0;
 // }
 
-/* Media queries */
+/* Media querie MEnu */
 @media (max-width: 768px) {
 
   .navegacao .navegacao-principal button{
@@ -347,9 +350,9 @@ body, html, .container-fluid, ul{
   margin-top: 150px;
   position: relative;
   margin-bottom: 100px;
-  & * {
-    padding: 0px;
-  }
+  // & * {
+  //   padding: 0px;
+  // }
   // display: flex;
   // flex-flow: column wrap;
   // justify-content: center;
@@ -371,7 +374,7 @@ body, html, .container-fluid, ul{
     & > div  {
       border-right: 1px solid rgba(255,255,255,0.2);
       text-align: center;
-      text-align: right;
+
       padding-right: 50px;
       height: 150px;
     }
@@ -397,6 +400,7 @@ body, html, .container-fluid, ul{
       font-weight: 300;
       color: #fff;      
     }
+    a {text-decoration: none;}
      button {
         margin-top: 20px;
         border: none;
@@ -407,6 +411,7 @@ body, html, .container-fluid, ul{
         text-transform: uppercase;
         padding: 10px;
         font-size: 16px;
+
         span {
           font-weight: 700;          
         }
@@ -489,5 +494,194 @@ body, html, .container-fluid, ul{
 }
 
 .rodape-home {
-  background-image: url('../images/');
+  margin-top: 100px;
+  background-image: url('../images/rodape.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  min-height: 336px;
+  
+  & > .wrapper {
+    margin-top: 70px;
+  }
+  .b1, .b2, .b3, .b4 {
+    padding: 0px 8px 20px 8px;
+    // display: flex;
+    // flex-flow: column wrap;
+    // justify-content: center;
+  }
+  .b1 {
+    span {
+      font-weight: 300;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    ul { 
+      margin-top: 20px;
+      li {
+        display: inline-block;
+        background: #626368;
+        border-radius: 15px; 
+        width: 40px;
+        height: 40px;
+
+        a {       
+          color: #fff;
+          text-decoration: none;
+          font-size: 20px;
+          text-align: center;
+          display: flex;
+          height: 100%;
+          width: 100%;
+          flex-flow: row wrap;
+          justify-content: center;
+          align-items: center;
+        }  
+      }
+    }
+  } /* FIM B1 */
+  .b2 {
+
+    ul {
+      text-transform: uppercase;
+
+      li {
+        margin-top: 20px;
+        &:first-child {
+          margin: 0px;
+        }
+        a {
+          text-decoration: none;
+          color: #fff;
+          position: relative;
+          &:before {
+            content: '';
+            background-image: url('../images/arrow-right-white.png');
+            display: block;
+            background-repeat: no-repeat;
+            background-size: 10px 6px;
+            width: 10px;
+            height:10px;
+            position: absolute;
+            left: -22px;
+            top: 7px;
+
+          }
+        }
+      }
+    }
+  }/* FIM B2 */
+  h3 {
+      font-weight: 700;
+      font-size: 16px;
+      padding: 0px;
+      margin: 0 0px 20px 0px;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        background-color: #fff;
+        width: 30px;
+        height: 2px;
+        bottom: -7px;
+        left: 0px;
+      }
+  }
+  p {
+    font-size: 12px;
+  }
+  .b4 {
+    position: relative;
+  }
+  .b4 .language-option {
+     position: absolute;
+     bottom: 0;
+     right: 0;
+  }
+}
+
+.form-control:focus {
+  border-color: $azul-medio;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 5px $azul-medio;
+}
+
+
+
+@media (max-width: 992px) {
+  .rodape-home {
+    .b3, .b4 {
+      margin-top: 50px;
+    }
+  }
+  .servicos-empresa {
+    margin-top: -120px;
+  }
+  .navegacao .navegacao-lista {
+    justify-content: center;
+  }
+  .servicos-empresa .item{ 
+    width: 48%;
+    margin-left: 2%;
+  }
+  .sobre-empresa-home .ano, .sobre-empresa-home .info {
+    padding-top: 50px;
+  }
+  .sobre-empresa-home .ano > div {
+    border-right: none;
+  }
+  .sobre-empresa-home * {
+
+  }
+  .sobre-empresa-home .info a button  {
+    display: block;
+    margin: 30px auto;
+  }
+  .contato .form-inline button {
+    padding: 20px 60px 20px 60px;
+    font-size: 18px;
+  }
+
+  .rodape-home {
+    .b1, .b2, .b3, .b4 {
+      // display: flex;
+      // flex-flow: row wrap;
+      // justify-content: center;
+      text-align: center;
+    }
+    .b1 img {
+      margin: 0 auto;
+    }
+    h3:after {
+      display: block;
+      margin: 0 auto;
+      position: inherit;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+   .rodape-home {
+    .b1, .b2, .b3, .b4 {
+      // // display: flex;
+      // // flex-flow: column wrap;
+      // justify-content: center;
+      // text-align: left;
+      // padding-left: 20px;
+    }
+    h3:after {
+      display: block;
+      margin: 0 auto;
+      position: inherit;
+    }
+  }
+
+  .servicos-empresa .item{ 
+    width: 100%;
+    // margin-left: 2%;
+  }
+}
+@media (min-width: 576px) { 
+  
 }
