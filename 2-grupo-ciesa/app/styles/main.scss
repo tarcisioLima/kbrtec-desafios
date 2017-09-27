@@ -16,7 +16,7 @@ $azul-medio: #2d4475;
 
 /* Iguala o tamanho das colunas.*/
 .row {
-  display: -webkit-box;
+  display: -webkit-box; 
   display: -webkit-flex;
   display: -ms-flexbox;
   display:  flex;
@@ -438,8 +438,7 @@ body, html, .container-fluid, ul{
     color: $preto-claro;
   }
   span {
-    font-family: 'Open Sans', sans-serif;
-    position: relative;
+    font-family: 'Josefin Sans', sans-serif;
     &:after {
       content: ' ';
       width: 50px;
@@ -452,8 +451,43 @@ body, html, .container-fluid, ul{
 }
 
 .contato .form-inline {
+
     .form-control {
       width: 100%;
     }
+
+    .form-group {
+      padding: 2px;
+
+     & input[type=text], & input[type=email], textarea {
+        border-radius: 0px; 
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        outline: $preto-claro;
+        font-weight: 300;
+        min-height: 50px;
+     }
+      & textarea {
+        resize: none;
+        -webkit-box-shadow: 0px 28px 24px -5px rgba(0,0,0,0.16);
+        -moz-box-shadow: 0px 28px 24px -5px rgba(0,0,0,0.16);
+        box-shadow: 0px 28px 24px -5px rgba(0,0,0,0.16);
+        margin-bottom: 59px;
+      }
+    }
+    button {
+      background-color: $azul-medio;
+      border-radius: 0px;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      margin: 0 auto;
+      padding: 10px 40px 10px 40px;
+      display: block;
+    }
 }
 
+.rodape-home {
+  background-image: url('../images/');
+}
