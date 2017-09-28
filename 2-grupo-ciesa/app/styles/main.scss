@@ -494,6 +494,7 @@ ul {
 }
 
 .rodape-home {
+  position: relative;
   margin-top: 100px;
   background-image: url('../images/rodape.png');
   background-repeat: no-repeat;
@@ -502,14 +503,26 @@ ul {
   font-family: 'Open Sans', sans-serif;
   min-height: 336px;
   
+  #go-to-top {
+    position: absolute;
+    width: 50px;
+    top: -50px;
+    height: 50px;
+    background-color: $azul-medio;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    right: 100px;
+    cursor: pointer;
+
+  }
+
   & > .wrapper {
     margin-top: 70px;
   }
   .b1, .b2, .b3, .b4 {
     padding: 0px 8px 20px 8px;
-    // display: flex;
-    // flex-flow: column wrap;
-    // justify-content: center;
   }
   .b1 {
     span {
@@ -607,7 +620,101 @@ ul {
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 5px $azul-medio;
 }
 
+/* Página Divisão e Serviços */
 
+.breadcrumb-ciesa {
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  padding-top: 10px;
+  li{
+    display: inline-block;
+    a {
+       color: #fff;
+    }
+  }
+  .ativo {
+    font-weight: 700;
+  }
+}
+#default-top {
+  
+  background-repeat: no-repeat;
+  min-height: 300px;
+  background-size: cover;
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+
+  .conteudo {
+    margin-top: 45px;
+  }
+
+  span {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    display: block;
+    color: #fff; 
+    font-weight: 300;
+    font-size: 20px;
+    &:after {
+      content: '';
+      width: 40px;
+      height: 2px;
+      background: #fff;
+      display: block;
+      margin: 10px auto 0px auto;
+    }
+   }
+}
+.divisao-servico {  background-image: url('../images/divisao-servicos.png'); }
+.contato-top { background-image: url('../images/contato.png'); }
+
+/* Página de Contato */
+.todos-contatos {
+  min-height: 400px;
+  i {
+    font-size: 50px;
+  
+    color: $azul-medio;
+
+  }
+  font-family: 'Open Sans';
+
+  h3 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.3;
+    color: $azul-medio;
+
+    &:after {
+      content: '';
+      background: $preto-claro;
+      width: 30px;
+      height: 2px;
+      display: block;
+      margin-top: 8px;
+    }
+  }
+  p {
+    font-weight: 300;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+
+  .call-center {
+    min-height: 50px;
+    float: right;
+    min-width: 100px; 
+    background: #efeeed;
+    span > span {
+      font-weight: 700;
+    }
+  }
+}
 
 @media (max-width: 992px) {
   .rodape-home {
@@ -663,13 +770,7 @@ ul {
 
 @media (max-width: 768px) {
    .rodape-home {
-    .b1, .b2, .b3, .b4 {
-      // // display: flex;
-      // // flex-flow: column wrap;
-      // justify-content: center;
-      // text-align: left;
-      // padding-left: 20px;
-    }
+    .b1, .b2, .b3, .b4 { }
     h3:after {
       display: block;
       margin: 0 auto;
@@ -679,9 +780,104 @@ ul {
 
   .servicos-empresa .item{ 
     width: 100%;
-    // margin-left: 2%;
   }
 }
-@media (min-width: 576px) { 
-  
+@media (max-width: 576px) { 
+  .main-header .language-option {
+    display: none;
+  }
+  .main-header > div {
+    // -webkit-box-shadow: 0px 7px 17px 0px rgba(0,0,0,0.31);
+    // -moz-box-shadow: 0px 7px 17px 0px rgba(0,0,0,0.31);
+    // box-shadow: 0px 7px 17px 0px rgba(0,0,0,0.31);
+    z-index: 100;
+    // padding-bottom: 1px;
+  }
+  .navegacao {
+    margin-bottom: 10px;  
+  }
+  .navegacao .navegacao-principal button {
+    margin-top: 5px;
+  }
+  .navegacao .navegacao-principal {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .navegacao > div {
+    padding: 0px;
+  }
+
+  .wrapper {
+    width: 85%;
+  }
+  #main-slider .carousel-inner > .item h1 {
+    font-size: 50px;
+  }
+  #main-slider .carousel-inner > .item p {
+    display: none;
+  }
+  #main-slider .controls-slider {
+    display: none;
+  }
+  .servicos-empresa {
+      margin-top: 10px;
+  }
+  #main-slider {
+    height: 300px;
+    margin-top: 0px;
+
+  }
+  #main-slider .carousel-inner > .item button {
+    margin-top: 20px;
+  }
+  .navegacao .navegacao-expansivel .navegacao-lista {
+    width: 50%;
+  }
+
+  .servicos-empresa .item {
+    border-radius: 15px;
+
+    & > img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    }
+    .rodape-servico a {
+      border-bottom-right-radius: 15px;
+    }
+  }
+  .sobre-empresa-home {
+    margin-top: 100px;
+    
+    &:after {
+      bottom: -1px;
+    }
+    .info {
+      padding-left: 0px;
+    }
+    .info p {
+      text-align: center;
+    }
+    .info button {
+      padding: 15px 20px 15px 20px;
+          margin: 30px auto 0px auto;
+    }
+    .ano > div {
+      padding-right: 0px;
+      height: auto;
+
+    }
+    .ano span {
+      display: none;
+    }
+  }
+  .rodape-home #go-to-top {
+    right: 0px;
+  }
+
+  #default-top {
+    min-height: 350px;
+  }
 }
+
