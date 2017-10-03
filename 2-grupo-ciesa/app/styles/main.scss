@@ -40,7 +40,7 @@ ul {
   list-style: none;
 }
 .wrapper {
-  width: 70%;
+  width: 82%;
   margin: 0 auto;
 }
 
@@ -496,7 +496,10 @@ ul {
       display: block;
     }
 }
-
+.border-bot {
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 100px;
+}
 .rodape-home {
   position: relative;
   margin-top: 100px;
@@ -517,7 +520,7 @@ ul {
     flex-flow: row;
     justify-content: center;
     align-items: center;
-    right: 100px;
+    right: 40px;
     cursor: pointer;
 
   }
@@ -678,7 +681,7 @@ ul {
 .contato-top { background-image: url('../images/contato.png'); }
 .empresa-top { background-image: url('../images/a-empresa.png'); }
 .localizacao-top { background-image: url('../images/nossa-localizacao.png'); }
-
+.comercio-logistica-top { background-image: url('../images/comercio-logistica.png'); }
 input[type]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: $preto-claro;
 }
@@ -850,9 +853,204 @@ input[type]:-moz-placeholder { /* Firefox 18- */
     margin: 0px;
     float: left;
   }
-
 }
 
+.form-generico {
+  font-family: 'Open Sans', sans-serif;
+  input[type=text], input[type=email],input[type=tel], textarea {
+        border-radius: 0px;        
+        font-size: 18px;
+        outline: $preto-claro;
+        font-weight: 300;
+        min-height: 50px;
+        background-color: #f5f5f5;
+     }
+
+   textarea {
+     resize: none;
+   }
+  label {
+    font-family: 'Open Sans', sans-serif;
+    color: $azul-medio;
+    font-weight: 300;
+
+  }
+}
+
+.detail {
+    &:before {
+      content: '';
+      background-image: url('../images/detail-rosa.png');
+      width: 26px;
+      display: block;
+      float: left;
+      margin-top: 5px;
+      margin-right: 10px;
+      height: 26px;
+    }   
+
+    &.detail-amarelo {      
+      &:before {
+        background-image: url('../images/detail-amarelo.png');
+        margin-top: 0px;
+      }
+    }
+    &.detail-azul {      
+      &:before {
+        background-image: url('../images/detail-azul.png');
+        margin-top: 0px;
+      }
+    }
+    &.detail-azul-escuro {      
+      &:before {
+        background-image: url('../images/detail-azul-escuro.png');
+        margin-top: 0px;
+      }
+    }
+  &.detail-cinza {      
+      &:before {
+        background-image: url('../images/detail-cinza.png');
+        margin-top: 0px;
+      }
+    }
+  }
+
+.detail:after {
+  margin-left: 37px;
+}
+.comercio-logistica {
+  margin-top: 50px;
+  font-family: 'Open Sans', sans-serif;
+    .p-fst {
+      margin-top: 20px;
+      margin-bottom: 70px;
+    }
+    .title {
+      font-size: 16px;
+      color: $azul-medio;
+      font-weight: bold;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .formulario {
+      padding-left: 5%;
+      h2 {
+        margin-top: 0px;
+        margin-bottom: 40px;
+      }
+
+      button {
+        background-color: $azul-medio;
+        border-radius: 0px;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        border: none;
+        font-size: 16px;
+        padding: 10px 30px 10px 30px;
+        display: block;
+      }
+    }
+    .galeria {
+      .img-current {
+        height: 350px;
+      }
+      .preview, .controles {
+        // background-color: #f5f5f5;
+        height: 80px;
+        width: 100%;
+        margin-top: 15px; 
+      }
+      .img-item {
+        display: block;
+        float: right;
+        border: 3px solid #fff;
+        height: 100%;
+        width: 20%;
+      }
+      .ativo {
+        border: 3px solid $azul-medio;
+      }
+      //Controles 
+      .controles {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        .controle-esquerda, .controle-direita {
+            display: block;
+            color: $azul-medio;
+            cursor: pointer;
+        }
+      }
+    }
+    .item {
+      padding-left: 0px;
+      -webkit-box-shadow: 0px 0px 46px -1px rgba(0,0,0,0);
+      -moz-box-shadow: 0px 0px 46px -1px rgba(0,0,0,0);
+      box-shadow: 0px 0px 46px -1px rgba(0,0,0,0);
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 15px;
+      // min-height: 200px;
+
+      &:hover {  
+        -webkit-box-shadow: 0px 0px 46px -1px rgba(0,0,0,0.33);
+        -moz-box-shadow: 0px 0px 46px -1px rgba(0,0,0,0.33);
+        box-shadow: 0px 0px 46px -1px rgba(0,0,0,0.33);       
+        transition: 0.1s;
+         
+      }
+      h3 {
+        font-weight: 700;
+        font-size: 16px;
+        padding-top: 0px;
+        min-height: 30px;
+        max-height: 30px;
+      }
+      p {
+        font-weight: 300;
+        font-size: 14px;
+        margin-top: 5px;
+
+      } 
+      &:hover .rodape-div-serv  {
+        visibility: visible;
+      }   
+      .rodape-div-serv {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        height: 30px;    
+        text-align: right;
+        text-transform: uppercase;
+        line-height: 2;
+        cursor: default;
+        visibility: hidden;
+      a { 
+        height: 100%;
+        width: 30px;
+        background-color: $preto-claro;
+        color: #fff;
+        display: inline-block;
+        float: right;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        margin-left: 10px;
+        &:hover {
+          text-decoration: none;
+        }
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
 .verde {color: $verde; }
 .vermelho {color: $vermelho;}
 .azul{color: $azul-medio; }
@@ -909,7 +1107,6 @@ input[type]:-moz-placeholder { /* Firefox 18- */
   }
   .localizacoes .item button {
     display: block; 
-
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -1080,3 +1277,5 @@ input[type]:-moz-placeholder { /* Firefox 18- */
 ::-webkit-scrollbar-thumb {
     background-color: #fff;
 }
+
+//http://kenwheeler.github.io/slick/
