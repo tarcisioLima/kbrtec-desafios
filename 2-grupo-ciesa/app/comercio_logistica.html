@@ -20,6 +20,7 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
   <body>
@@ -84,19 +85,32 @@
             </div>
             <div class="row border-bot">
                 <!-- Galeria -->
-                <div class="col-md-6 col-lg-6 col-sm-12-col-xs-12 galeria">
-                    <img src="images/servico-img-1.png" class="img-responsive img-current">
-                    <div class="preview">
-                      <img class="img-item ativo" src="images/servico-img-1.png" alt="imagem"> 
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 galeria" id="galeria">
+                    <div class="imagens-galeria">
+                      <img src="images/servico-img-1.png" class="img-responsive img-current">
+                      <img src="images/slider-1.png" class="img-responsive img-current">
+                      <img src="images/slider-2.jpg" class="img-responsive img-current">
+                      <img src="images/servico-img-1.png" class="img-responsive img-current">
+                      <img src="images/slider-1.png" class="img-responsive img-current">
+                      <img src="images/slider-2.jpg" class="img-responsive img-current">
+                    </div>
+                    <!-- O preview -->
+                    <div class="preview">                      
+                      <div class="item-p"><img src="images/servico-img-1.png" height="200px" alt="Imagens"></div>
+                      <div class="item-p"><img src="images/slider-1.png" height="200px" alt="Imagens"></div>
+                      <div class="item-p"><img src="images/slider-2.jpg" height="200px" alt="Imagens"></div>
+                      <div class="item-p"><img src="images/servico-img-1.png" height="200px" alt="Imagens"></div>
+                      <div class="item-p"><img src="images/slider-1.png" height="200px" alt="Imagens"></div>
+                      <div class="item-p"><img src="images/slider-2.jpg" height="200px" alt="Imagens"></div>
                     </div>
                     <!-- Controles -->
                     <div class="controles">
-                      <i class="fa fa-chevron-left fa-2x controle-esquerda" aria-hidden="true"></i>
-                      <i class="fa fa-chevron-right fa-2x controle-direita" aria-hidden="true"></i>
+                      <i class="fa fa-chevron-left fa-2x controle-esquerda prev" aria-hidden="true"></i>
+                      <i class="fa fa-chevron-right fa-2x controle-direita next" aria-hidden="true"></i>
                     </div>
                 </div>
                 <!-- Formulário -->
-                <div class="col-md-6 col-lg-6 col-sm-12-col-xs-12 formulario">
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 formulario">
                     <h2 class="h2-padrao">Solicite um orçamento</h2>
                     <form action="#" method="get" class="form-generico">
                       <div class="form-group">
@@ -194,7 +208,7 @@
         </div>  
       </div>
     </footer>
-
+  
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -215,6 +229,7 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
     
     <!-- build:js scripts/plugins.js -->
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
@@ -233,8 +248,7 @@
   
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/slider.js"></script>
     <!-- endbuild -->   
-    <script src="https://maps.googleapis.com/maps/api/js?callback=meuMapa"></script>
-
   </body>
 </html>
