@@ -1,4 +1,9 @@
 
+//Scroll To top
+$('#go-to-top').click(function(){
+	$('html,body').animate({ scrollTop: 0 }, 'slow');
+});
+
 
 //Items slider
 var totalItems = $('#main-slider .item').length;
@@ -19,8 +24,9 @@ $('.controls-slider > div .total').html('/0' + totalItems);
 // })
 
 $('.navegacao .navegacao-principal .alternador').click(function(){
-	$('.overlay').fadeIn();
+	// $('.overlay').show();
 	$('.navegacao-expansivel').show();
+	$('.navegacao-lista').css({transition: "1s", transform: "translateX(0%)"});
 
 });
 

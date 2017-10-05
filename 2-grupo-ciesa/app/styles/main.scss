@@ -82,14 +82,14 @@ ul {
       font-size: 22px;
       padding-top: 5px;
       color: $azul-medio;
-      display: none;
-  
+      display: none;  
     }
   }
   .navegacao-expansivel {
     height: 100%;
     display: block;
   }
+
   .navegacao-lista {
     list-style: none;
     display: flex;
@@ -100,7 +100,7 @@ ul {
       
     .ativo {
         border: 1px solid $azul-medio;
-      }
+    }
 
     li {
       display: inline-block;      
@@ -110,17 +110,16 @@ ul {
         padding: 8px 15px 5px 15px;
         display: block;      
       }
-      
-        &:hover {
-          text-decoration: none;
-          color: #fff;
-          background-color: $azul-medio;
-        }
-         &:hover a {                   
-          color: #fff;
-          text-decoration: none;
-        }
-        
+
+      &:hover {
+        text-decoration: none;
+        color: #fff;
+        background-color: $azul-medio;
+      }
+       &:hover a {                   
+        color: #fff;
+        text-decoration: none;
+      }        
     }
   }
 }
@@ -300,6 +299,7 @@ ul {
   }
 }
 
+
 // .overlay { 
 //   z-index: 1000;
 //   background-color: rgba(0,0,0,0.5);
@@ -321,7 +321,6 @@ ul {
     z-index: 1000;
     background-color: rgba(0,0,0,0.5);
     position: fixed;
-    transform: translateZ(0);
     top: 0;
     right: 0;
     bottom: 0;
@@ -330,17 +329,48 @@ ul {
 
     .navegacao-lista {
       background-color: #fff;
-      width: 30%;
+      width: 40%;
       right: 0;
+      transform: translateX(100%);
       position: absolute;
       display: block;
-      z-index: 1010;
-      .ativo {
-        background-color: $azul-medio;
-         a {color: #fff;}
+      z-index: 1010;      
+
+
+      .ativo a {
+        position: relative;
+        font-weight: 700;
+          &:before {
+          content: '';
+          background-image: url('../images/arrow-right.png');      
+          position: absolute;   
+          height: 10px;
+          width: 14px;
+          left: -14px;
+          top: 12px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          // margin-right: 10px;
+        }
+
+    
       }
       li {
-        display: block;        
+        display: block;
+        padding: 10px 20px 10px 30px;
+        font-size: 16px;
+        border: none;
+        background-color: #fff;
+        border-bottom: 1px solid #e9e9ea;
+ 
+
+        a {
+           color: #323846;
+           font-weight: 300;
+        }
+        &:hover a {
+          color: #323846;
+        }     
       }
     }
   }  
@@ -682,6 +712,10 @@ ul {
 .empresa-top { background-image: url('../images/a-empresa.png'); }
 .localizacao-top { background-image: url('../images/nossa-localizacao.png'); }
 .comercio-logistica-top { background-image: url('../images/comercio-logistica.png'); }
+.transportes-servicos-top { background-image: url('../images/transportes-servicos.png'); }
+.negocios-imobiliarios-top { background-image: url('../images/negocios-imobiliarios.png'); }
+.operadora-portuaria-top { background-image: url('../images/operadora-portuaria.png'); }
+
 input[type]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: $preto-claro;
 }
@@ -822,6 +856,10 @@ input[type]:-moz-placeholder { /* Firefox 18- */
     height: 200px;
     margin-top: 10px;
     width: 100%;
+  }
+  .item > .row h2{
+    background-color: #fff;
+    min-height: 50px;
   }
   // criar classe generica desse botao
   .item button {
@@ -1071,6 +1109,23 @@ input[type]:-moz-placeholder { /* Firefox 18- */
     }
   }
 }
+/* Página Operadora Portuária */
+.operadora-portuaria-lists {
+  margin-bottom: 100px;
+  ul li {
+    display: block;
+    padding: 10px;
+    font-weight: 300;
+
+    &:before {
+      content: url('../images/arrow-right.png');
+      display: block;
+      float: left;
+      padding-right: 15px;
+    }
+  }
+} 
+
 .verde {color: $verde; }
 .vermelho {color: $vermelho;}
 .azul{color: $azul-medio; }
@@ -1191,7 +1246,7 @@ input[type]:-moz-placeholder { /* Firefox 18- */
     margin-top: 20px;
   }
   .navegacao .navegacao-expansivel .navegacao-lista {
-    width: 50%;
+    width: 80%;
   }
 
   .servicos-empresa .item {
@@ -1266,13 +1321,13 @@ input[type]:-moz-placeholder { /* Firefox 18- */
       }
     }
   }
-  .fix-servicos-empresa > .servicos-empresa { 
+  .fix-servicos-empresa > .servicos-empresa {
     margin-top: 30px !important;
   }
   .localizacoes .item button {
     width: 100%;
   }
-  .localizacoes .item h2{
+  .localizacoes .item h2 {
     padding: 15px;
   }
   .servicos-empresa .row {
@@ -1282,8 +1337,7 @@ input[type]:-moz-placeholder { /* Firefox 18- */
     width: 90%;
   }
   .comercio-logistica .galeria .controles {
-    margin-top: 0px;
-    
+    margin-top: 0px;    
   }
   .comercio-logistica .formulario button {
     width: 100%;
@@ -1298,5 +1352,8 @@ input[type]:-moz-placeholder { /* Firefox 18- */
 ::-webkit-scrollbar-thumb {
     background-color: #fff;
 }
+
+
+
 
 //http://kenwheeler.github.io/slick/
