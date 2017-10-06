@@ -39,10 +39,17 @@ body, html, .container-fluid, ul{
 ul {
   list-style: none;
 }
+
 .wrapper {
   width: 82%;
   margin: 0 auto;
 }
+
+textarea#areatexto::placeholder {
+  color: $preto-claro;
+}
+
+
 
 .titulo-padrao {
   font-family: 'Oswald', sans-serif;
@@ -89,7 +96,9 @@ ul {
     height: 100%;
     display: block;
   }
-
+  .side-nav {
+    display: none;
+  }
   .navegacao-lista {
     list-style: none;
     display: flex;
@@ -311,13 +320,30 @@ ul {
 //   left: 0;
 // }
 
-/* Media querie MEnu */
+.fechar {
+  display: none;
+}
+
+.abrir {
+  display: block;
+}
+
+#get-back {
+  display: none;
+}
+/* Media querie Menu */
+@media (min-width: 768px) {
+ .side-nav {
+    display: none !important;
+  }
+}
 @media (max-width: 768px) {
 
   .navegacao .navegacao-principal button{
     display: block;
+
   }
-  .navegacao .navegacao-expansivel {
+  .navegacao .overlay {
     z-index: 1000;
     background-color: rgba(0,0,0,0.5);
     position: fixed;
@@ -326,34 +352,60 @@ ul {
     bottom: 0;
     left: 0;
     display: none;
+  } 
+  .navegacao .navegacao-expansivel {
+    // position: fixed;
+    // z-index: 11000;
+    // top: 0;
+    // right: 0;
+    // display: block;
+    // height: 100%;
+    // width: 100%;
+    // bottom: 0;
+    // left: 0;
 
+    
+    #get-back {
+      display: block;
+      font-size: 20px;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #000;
+      color: #fff;
+      text-align: right;
+      cursor: pointer;
+    }
+     /* era navegacao-lista */
     .navegacao-lista {
+        display: none;
+     }
+
+    .side-nav {      
       background-color: #fff;
       width: 40%;
-      right: 0;
+      right: 0; 
+      top: 0px;
+      bottom: 0px;
       transform: translateX(100%);
-      position: absolute;
-      display: block;
-      z-index: 1010;      
-
+      position: fixed;
+      // display: block;
+      z-index: 1010;
+      transition: 0.5s;      
 
       .ativo a {
         position: relative;
         font-weight: 700;
           &:before {
-          content: '';
-          background-image: url('../images/arrow-right.png');      
-          position: absolute;   
-          height: 10px;
-          width: 14px;
-          left: -14px;
-          top: 12px;
-          background-repeat: no-repeat;
-          background-size: cover;
+            content: '';
+            background-image: url('../images/arrow-right.png');      
+            position: absolute;   
+            height: 10px;
+            width: 14px;
+            left: -18px;
+            top: 2px;
+            background-repeat: no-repeat;
+            background-size: cover;
           // margin-right: 10px;
-        }
-
-    
+        }    
       }
       li {
         display: block;
@@ -362,17 +414,20 @@ ul {
         border: none;
         background-color: #fff;
         border-bottom: 1px solid #e9e9ea;
- 
 
-        a {
-           color: #323846;
-           font-weight: 300;
-        }
         &:hover a {
           color: #323846;
-        }     
+
+        }
+
+        a {
+          color: #323846;
+          font-weight: 300;
+          text-decoration: none;
+        }
+             
       }
-    }
+    } /* FIM .navegacao-lista */
   }  
 }
 
@@ -572,7 +627,13 @@ ul {
       margin-top: 20px;
       li {
         display: inline-block;
-        background: #626368;
+        // background: #626368;
+        background-image: -ms-radial-gradient(left top, ellipse farthest-corner, #767981 0%, #626368 100%);
+        background-image: -moz-radial-gradient(left top, ellipse farthest-corner, #767981 0%, #626368 100%);
+        background-image: -o-radial-gradient(left top, ellipse farthest-corner, #767981 0%, #626368 100%);
+        background-image: -webkit-gradient(radial, left top, 0, left top, 572, color-stop(0, #767981), color-stop(100, #626368));
+        background-image: -webkit-radial-gradient(left top, ellipse farthest-corner, #767981 0%, #626368 100%);
+        background-image: radial-gradient(ellipse farthest-corner at left top, #767981 0%, #626368 100%);
         border-radius: 15px; 
         width: 40px;
         height: 40px;
@@ -1139,6 +1200,7 @@ input[type]:-moz-placeholder { /* Firefox 18- */
       margin-top: 50px;
     }
   }
+
   .servicos-empresa {
     margin-top: -120px;
   }
@@ -1194,7 +1256,6 @@ input[type]:-moz-placeholder { /* Firefox 18- */
       position: inherit;
     }
   }
-
   .servicos-empresa .item{ 
     width: 100%;
   }
@@ -1245,7 +1306,7 @@ input[type]:-moz-placeholder { /* Firefox 18- */
   #main-slider .carousel-inner > .item button {
     margin-top: 20px;
   }
-  .navegacao .navegacao-expansivel .navegacao-lista {
+  .navegacao .navegacao-expansivel .side-nav {
     width: 80%;
   }
 
@@ -1342,18 +1403,55 @@ input[type]:-moz-placeholder { /* Firefox 18- */
   .comercio-logistica .formulario button {
     width: 100%;
   }
+  .servicos-empresa .rodape-servico a {
+    border-top-left-radius: 10px;
+    width: 30%;
+  }
+  .rodape-home .b2, .rodape-home .b3 {
+    display: none;
+  }
+  .rodape-home .b1 span {
+    display: none;
+  }
+  .rodape-home .b4 {
+    margin-top: 10px;
+    h3, h3 + p{
+      display: none;
+    }
+    h3 + p + p {
+      padding-bottom: 12px;
+    }
+    .language-option {
+      position: initial;
+      img {
+        margin-top: 10px;
+      }
+      &:before {
+        content: 'Copyright Ciesa 2017 Todos os Direitos Reservados';
+        font-size: 12px;
+        border-top: 1px solid #fff;
+        padding-top: 6px;   
+      }
+    }
+  }
+  #main-slider .carousel-inner > .item button {
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  .sobre-empresa-home {
+    margin-bottom: 0px;
+  }
 }
 
 //troca a cor do scroll
 ::-webkit-scrollbar {
     width: 12px;
-    background-color: $preto-claro;
+    background-color: #fff;
 } 
 ::-webkit-scrollbar-thumb {
-    background-color: #fff;
+    background-color: $preto-claro;
 }
 
-
-
-
 //http://kenwheeler.github.io/slick/
+//https://www.youtube.com/watch?v=FqbOu5ZRFag

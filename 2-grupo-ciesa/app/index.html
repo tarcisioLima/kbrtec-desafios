@@ -36,28 +36,39 @@
           <a href="#"><img src="images/australia.png"></a>
         </div>
       </div>
-         
+      <!-- Navigation -->
       <nav class="row navegacao">
         <div class="col-xs-5 col-sm-4 col-md-4 col-lg-4">
-          <a href="#">
+          <a href="index.html">
             <img class="img-responsive" alt="Logomarca da empresa grupo ciesa" src="images/logomarca.png">
           </a>
         </div>
           <div class="col-xs-7 col-sm-8 col-md-8 col-lg-8 navegacao-principal">
+              <!-- Overlay -->
+              <div class="overlay"></div>
               <button type="button" class="alternador">☰</button>
                 <div class="navegacao-expansivel">
-                  <ul class="navegacao-lista">
+                  <ul class="navegacao-lista">                    
                     <li class="ativo"><a href="index.html">Home</a></li>
                     <li><a href="divisoes_servicos.html">Divisões e Serviços</a></li>
                     <li><a href="empresa.html">A empresa</a></li>
                     <li><a href="localizacao.html">Localização</a></li>
                     <li><a href="contato.html">Contatos</a></li>
                 </ul>
+                <!-- sidebar Navigation -->
+                <div id="side-menu" class="side-nav">
+                  <li id="get-back"><i class="fa fa-home" aria-hidden="true"></i></li>
+                  <li class="ativo"><a href="index.html">Home</a></li>
+                  <li><a href="divisoes_servicos.html">Divisões e Serviços</a></li>
+                  <li><a href="empresa.html">A empresa</a></li>
+                  <li><a href="localizacao.html">Localização</a></li>
+                  <li><a href="contato.html">Contatos</a></li>
+                </div>
               </div>
           </div>
       </nav>
     </div> 
-    </div>   
+    </div>  
       <!-- FIM Navigation -->
       <!-- Slider -->
       <div class="container-fluid" id="slider">        
@@ -69,7 +80,7 @@
                 <p>
                   Executamos o gerenciamento da logística de terceiros <br> no intuíto de reduzir os custos.                  
                 </p>
-                <a href="#"><button href="#"><span>Contratar</span> agora <img src="images/arrow-right.png" alt="seta para direita"></button></a>
+                <a href="comercio_logistica.html"><button href="#"><span>Contratar</span> agora <img src="images/arrow-right.png" alt="seta para direita"></button></a>
               </div>
 
               <div class="item">
@@ -170,9 +181,6 @@
     </div>
   </section>
 
-  <!-- Overlay -->
-  <div class="overlay"></div>
-
   <section class="container-fluid sobre-empresa-home">
     <div class="wrapper">
       <div class="row">
@@ -217,7 +225,7 @@
             <input type="text" class="form-control" id="exampleInputName2" placeholder="Telefone">
           </div>
           <div class="form-group col-xm-12 col-sm-12 col-md-12 col-lg-12">        
-            <textarea class="form-control" rows="5" 
+            <textarea id="areatexto" class="form-control" rows="5" 
             placeholder="Mensagem"></textarea>
           </div>
           <button type="submit" class="btn btn-default">
