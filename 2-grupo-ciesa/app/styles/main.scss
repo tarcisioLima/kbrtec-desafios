@@ -251,7 +251,20 @@ textarea#areatexto::placeholder {
     padding: 0px;
     margin-bottom: 20px;
     background-color: #fff;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 5px;
+      bottom: -5px;
+      background: $azul-medio;
+      transition: 0.3s;
     }
+    &:hover:before {
+      width: 100%;
+    }
+  }
   h2, p {
     padding: 10px;
   }
