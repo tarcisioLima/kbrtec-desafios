@@ -1,0 +1,103 @@
+$icon-font-path: '../fonts/';
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+
+@import 'reset';
+
+/*
+extra-light: 200
+light: 300
+regular: 400
+medium: 500
+semi-bold: 600
+bold: 700
+*/
+
+//Cores
+$vermelho: #aa3337;
+$azul: #24547e;
+$cinza: #a2a2a2;
+
+.first-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.wrapper {
+  width: 80%;
+}
+.second-title-section {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  color: $azul;
+  font-weight: 300;
+  span {
+    font-weight: 600;
+    color: $vermelho;
+    &:before {
+      content: url('../images/red-book.png');
+      display: block;
+      float: left;
+      transform: translateY(-5px);
+      margin-right: 12px;
+    }
+  }
+}
+.al-left {
+  text-align: center;
+}
+.al-center {
+  text-align: left;
+}
+.bg-red {
+  background-color: $vermelho;
+}
+.bg-blue {
+  background-color: $azul;
+}
+.bg-cinza {
+  background-color: $cinza;
+}
+.cl-white {
+  color: #fff;
+}
+.cl-azul {
+  color: $azul;
+}
+.cl-vermelho {
+  color: $vermelho;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.button-default {
+  background-color: $vermelho;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.22);
+  padding: 10px 30px;
+}
+
+@mixin flex-position($position: row, $wrap: wrap, $x-axis: center, $y-axis: center) {
+  display: flex;
+  flex-flow: $position $wrap;
+  justify-content: $x-axis;
+  align-items: $y-axis;
+}
+.main-nav {
+  @extend .bg-cinza;
+
+  ul {
+    @include flex-position(row);
+  }
+}
+
