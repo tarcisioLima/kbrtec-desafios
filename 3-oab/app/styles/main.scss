@@ -31,6 +31,7 @@ $cinza: #a2a2a2;
 }
 .wrapper {
   width: 80%;
+  margin: 0 auto;
 }
 .second-title-section {
   font-family: 'Open Sans', sans-serif;
@@ -56,13 +57,13 @@ $cinza: #a2a2a2;
   text-align: left;
 }
 .bg-red {
-  background-color: $vermelho;
+  background: $vermelho;
 }
 .bg-blue {
-  background-color: $azul;
+  background: $azul;
 }
 .bg-cinza {
-  background-color: $cinza;
+  background: $cinza !important;
 }
 .cl-white {
   color: #fff;
@@ -93,11 +94,184 @@ $cinza: #a2a2a2;
   justify-content: $x-axis;
   align-items: $y-axis;
 }
+
+/* Navbar */
 .main-nav {
   @extend .bg-cinza;
-
-  ul {
-    @include flex-position(row);
+  .navbar-nav > li {
+    min-height: 50px;
+    border-left: 1px solid #b6b6b6;
+    border-right: 1px solid #8f8f8f;   
+    &:first-child {
+      border-left: none;
+    }
+    &:last-child {
+      border-right: none;
+    }
+  }
+  .navbar-nav > li > a {      
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    vertical-align:middle;
+    line-height: 0;
+    font-weight: 300;
+    margin-right: 3px;
+    margin-left: 3px;
+    background: #a2a2a2 !important;
+    &:hover {
+      background: $azul;
+    }
   }
 }
-
+.navbar .navbar-toggler .icon-bar {
+  background: #fff !important;
+}
+@media (max-width: 768px){
+.main-nav {
+    .navbar-nav {
+      & > li {
+        border: none;       
+        & > a {
+          margin: 0px;
+          line-height: initial;
+        }
+      }
+    }
+  }
+}
+.advantages {
+  // background: $cinza;
+  color: #fff;
+  padding: 10px 10px;
+  overflow: hidden;
+  border-radius: 3px;
+  .title, .content {      
+    display: block;
+    float: left;
+  }
+  .title {
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 18px;
+    width: 40%;
+    font-weight: 600;
+  }
+  .content {
+    font-size: 18px;
+    width: 60%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    text-align: right;
+  }
+  a {
+    border-radius: 5px;
+    background: #fff;
+    color: $vermelho;
+    float: right;
+    font-weight: 700;
+    padding: 0px 10px;
+    font-weight: 700;
+    margin-top: 5px;
+  }
+}
+/* Header */
+.main-header {
+  font-family: 'Open Sans', sans-serif;
+  @extend .wrapper;
+  & > a {       
+    &:after {
+      content: '';
+      clear: both;
+    }
+  }
+  & > .row > a > span {
+    text-transform: uppercase;
+    color: #767676;
+    font-weight: 700;    
+    float: right;
+    padding: 10px 0px;
+    &:after {     
+      font-family: FontAwesome;
+      content: '';
+      color: $vermelho;
+      font-size: 16px;
+      margin-left: 5px;
+      clear: both;
+    }
+  }
+  .logo-block {
+    text-transform: uppercase;
+    color: #767676;    
+    img {
+      width: 50%;
+      float: left;
+    }
+    & > p {
+      float: left;
+      display: block;
+      min-width: 50%;
+      padding: 10px;
+      margin-top: 10px;
+      & > span {
+        font-weight: 700;
+      }
+      & + p {
+        clear: both;
+        width: 100%;
+        margin-top: 0px;
+        font-weight: 700;
+        font-size: 12px;
+        padding: 0px;
+      }
+    }
+  }
+  .item-benefits .advantages {
+    @extend .bg-blue;
+    a {
+      color: $azul
+    }
+  }
+  .item-satisfaction {
+    padding-right: 0px;
+    .advantages {
+      @extend .bg-red;
+      a {
+        color: $vermelho;
+      }
+    }
+    .input-wrapper {
+      position: relative;
+      width: 100%;
+      margin-top: 20px;
+      
+      .search {
+        width: 100%;
+        height: 38px;
+        border: 1px solid $cinza;
+        border-radius: 3px;
+        padding: 5px 10px;
+        &::placeholder {
+          font-weight: 700;
+          color: $cinza;
+        }
+      }
+      button {
+        position: absolute;
+        right: 5px;
+        top: 4px;
+        background: $vermelho;
+        color: #fff;
+        width: 35px;
+        border: none;
+        border-radius: 5px;
+        height: 30px;
+        outline: none;
+        font-size: 18px;
+      }
+    }
+  }
+}
