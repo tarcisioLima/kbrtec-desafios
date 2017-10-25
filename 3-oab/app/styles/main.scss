@@ -3,11 +3,13 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import "reset";
+
 //Fonts
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
 
-@import 'reset';
+
 
 /*
 extra-light: 200
@@ -272,6 +274,20 @@ $cinza: #a2a2a2;
         outline: none;
         font-size: 18px;
       }
+    }
+  }
+}
+#slider-news {
+  .carousel-caption {
+    text-align: left;
+    width: 50%;
+    left: 10%;
+    right: 10%;
+    top: 20px;
+
+    span {
+      display: block;
+      font-size: 9px;
     }
   }
 }
