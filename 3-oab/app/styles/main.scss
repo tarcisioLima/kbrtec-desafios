@@ -3,7 +3,6 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-@import "reset";
 
 //Fonts
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
@@ -27,7 +26,7 @@ $cinza: #a2a2a2;
 
 .first-title {
   font-family: 'Open Sans', sans-serif;
-  font-size: 22px;
+  font-size: 30px;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -79,6 +78,9 @@ $cinza: #a2a2a2;
 .mt-20 {
   margin-top: 20px;
 }
+.mt-50 {
+  margin-top: 50px;
+}
 .mb-20 {
   margin-bottom: 20px;
 }
@@ -88,6 +90,11 @@ $cinza: #a2a2a2;
   font-family: 'Open Sans', sans-serif;
   box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.22);
   padding: 10px 30px;
+  font-size: 18px;
+  display: inline-block;
+}
+.button-default:hover {
+  color: #fff
 }
 
 @mixin flex-position($position: row, $wrap: wrap, $x-axis: center, $y-axis: center) {
@@ -287,7 +294,74 @@ $cinza: #a2a2a2;
 
     span {
       display: block;
-      font-size: 9px;
+      font-size: 12px;
+      font-family: 'Open Sans', sans-serif;
+      @extend .mb-20;
+      line-height: 0;
     }
   }
+  .carousel-indicators {
+    li {
+      background: #fff;
+   }
+   .active {
+      background: $azul;
+      border: 2px solid #fff;
+   }
+ }
 }
+
+.generic-box {
+  h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    @extend .mt-20;
+  }
+  h3, p, .new-footer {
+    padding: 0px 20px;
+  }
+  .new-footer {
+    span {
+      color: #aab1b9;
+      font-size: 14px;
+      float: right;
+      &:after {
+        content: '+';
+        color: $vermelho;
+        font-size: 22px;
+        font-weight: 700;
+        display: inline-block;
+        transform: translate(5px, 2px);
+      }
+    }
+  }
+  &:after {
+    content: '';      
+    background: #27455d;
+    height: 3px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 30%;
+    transition: 0.5s;
+  }
+  &:hover {
+    background-color: #24547e;
+    color: #fff;
+    transition: 0.5s;
+  }
+  &:hover .new-footer span{
+    color: #fff;
+  }
+  &:hover::after {
+    width: 100%;
+    transition: 0.5s;
+  }
+}
+@import "reset";
+@import "home";
