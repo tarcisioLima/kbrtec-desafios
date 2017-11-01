@@ -36,7 +36,7 @@ $cinza: #a2a2a2;
 }
 .second-title-section {
   font-family: 'Open Sans', sans-serif;
-  font-size: 22px;
+  font-size: 28px;
   color: $azul;
   font-weight: 300;
   span {
@@ -46,7 +46,7 @@ $cinza: #a2a2a2;
       content: url('../images/red-book.png');
       display: block;
       float: left;
-      transform: translateY(-5px);
+      transform: translateY(0px);
       margin-right: 12px;
     }
   }
@@ -362,6 +362,57 @@ $cinza: #a2a2a2;
     width: 100%;
     transition: 0.5s;
   }
+}
+//Swiper Slider Default Style
+.swiper-container {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 1px 9px 0px rgba(50, 50, 50, 0.5);
+ 
+  height: 200px;  
+  // padding: 20px;
+}
+.swiper-container .btn-see-all {
+  position: absolute;  
+  z-index: 100;
+  bottom: 0px;
+  right: 0px;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  @include flex-position(row, wrap, space-around, center);
+}
+.swiper-pagination-bullet-active {
+  background: $azul;
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  background: url('../images/prev-slider.png');
+  background-repeat: no-repeat;
+  // background-size: contain;
+  background-size: 20px 40px;
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  background: url('../images/next-slider.png');
+  background-repeat: no-repeat;
+  background-size: 20px 40px;
+  // background-size: contain; 
+}
+
+.little-span-red {
+  font-size: 12px;
+  color: $vermelho;
+}
+.btn-azul-default {
+  padding: 10px 20px;
+  color: #fff;
+  background: $azul;
+  font-size: 16px;
+  border-radius: 5px;
+
 }
 @import "reset";
 @import "home";

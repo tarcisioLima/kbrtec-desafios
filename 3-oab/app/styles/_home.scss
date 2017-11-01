@@ -165,8 +165,8 @@
 	font-family: 'Opens Sans', sans-serif;
 	background: $azul;
 	color: #fff;
-	margin-bottom: 100px;
-	min-height: 150px;
+	margin-bottom: 150px;
+	height: 230px;
 	.top {
 		padding: 0px;
 		min-height: 80px;
@@ -207,6 +207,79 @@
     	border-radius: 10px;
     	position: relative;
     	margin-left: 50px;  		
+		}
+	}
+	.conv-slider {
+		margin-top: 20px;
+	}
+}
+.events {
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 100px;
+	background: #fff;
+	.second-title-section span:before {
+		display: none;	
+	}
+	img { 
+    border-radius: 10px; 
+    max-height:300px;
+    min-height:300px;
+    width: 100%;
+  }
+  h3 {
+  	font-weight: 700;
+  	font-size: 18px;
+  	margin: 0px auto 15px auto;
+  	&:after {
+  		content: url('../images/camera-icon.png');
+			float: right;
+  	}
+  }
+  figure {
+  	position: relative;
+
+  	a {
+  		position: absolute;
+  		left: 10px;
+  		bottom: 15px;
+  	}
+  }
+}
+.services-consults {	
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	background-image: url('../images/consultas-servicos.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 300px;
+
+	h2 {
+		margin-top: 50px;
+		font-weight: 600;
+		font-size: 28px;
+	}
+	h3 {
+		font-weight: 700;
+		font-size: 22px;
+	}
+	ul {
+		margin-top: 15px;
+
+		li:before {
+			content: "\f105";
+			font-family: FontAwesome;
+			margin-right: 10px;
+		}
+	}
+	& > .wrapper > .row > div {
+		&:nth-child(1) h3:before {
+			content: '';
+		}
+		&:nth-child(2) h3:before {
+			content: '';
+		}
+		&:nth-child(3) h3:before {
+			content: '';
 		}
 	}
 }
