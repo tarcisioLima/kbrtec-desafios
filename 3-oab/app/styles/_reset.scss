@@ -21,8 +21,15 @@ a:hover {
   text-decoration: none;
   color: #fff;
 }
-a:active{
-	background-color: transparent;
+// a:active{
+// 	background-color: $vermelho;
+// 	color: #fff;
+// 	 text-decoration: none;
+// }
+a:link, a:visited {
+	color: unset;
+	text-decoration: none;
 }
+
 
 
