@@ -24,6 +24,7 @@ $vermelho: #aa3337;
 $azul: #24547e;
 $cinza: #a2a2a2;
 $preto-default: #333333;
+
 .first-title {
   font-family: 'Open Sans', sans-serif;
   font-size: 30px;
@@ -128,14 +129,14 @@ $preto-default: #333333;
     border-radius: 3px;
     margin-top: 10px;
     margin-bottom: 10px;
-    vertical-align:middle;
+    vertical-align: middle;
     line-height: 0;
     font-weight: 300;
     margin-right: 3px;
     margin-left: 3px;
     background: #a2a2a2 !important;
     &:hover {
-      background: $azul;
+      background: $azul !important;
     }
   }
 }
@@ -481,6 +482,8 @@ $preto-default: #333333;
     transform: translate(-15px, 10px);
   }
   .fst > div:nth-child(4) {
+    min-height: 250px;
+
     span {
       font-weight: 300;
     }
@@ -493,12 +496,16 @@ $preto-default: #333333;
       background: #526a7d;
       border-radius: 10px;
       border: none;
+      width: 100%;
       margin-top: 10px;
-      height: 30px;      
+      padding-left: 5px;
+      height: 30px;
+      outline: none;     
     }
     input[type=text]::placeholder {
       color: #fff;
-      padding: 5px;
+      padding: 5px; 
+      font-size: 12px;
     }
     button {
       color: $preto-default;
@@ -506,26 +513,45 @@ $preto-default: #333333;
       color: #fff;
       border: none;
       position: absolute;
-      right: 0;
+      right: 2px;
       top: 15px;
       width: 35px;
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
     }
     .social-media {
-      margin-top: 20px;
+      margin-top: 110px;
+      span {
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+      a {display: inline-block; margin: 3px;}
+      i {
+        border: 1px solid #fff;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.5;
+        padding: 1px 5px;
+      }
     }
   }
   .under-footer {    
-    min-height: 50px;
+    height: 50px;
     background: #fff;
     font-weight: 300;
     color: $azul;
     font-size: 14px;
-    & > .wrapper{
-      padding-top: 15px;
-      vertical-align: middle;
-    }   
+    .wrapper {
+      // padding-top: 15px;
+      // vertical-align: middle;
+      @include flex-position(row, wrap, space-between);
+        height: 100% !important;
+      }   
     span + span > a > span {
       color: $vermelho;
       font-weight: 700;
