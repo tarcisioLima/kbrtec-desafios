@@ -162,6 +162,10 @@ $preto-default: #333333;
   padding: 10px 10px;
   overflow: hidden;
   border-radius: 3px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+
   .title, .content {      
     display: block;
     float: left;
@@ -170,12 +174,12 @@ $preto-default: #333333;
     text-transform: uppercase;
     font-size: 18px;
     line-height: 18px;
-    width: 40%;
+    width: 50%;
     font-weight: 600;
   }
   .content {
     font-size: 18px;
-    width: 60%;
+    width: 50%;
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
     text-align: right;
@@ -188,6 +192,12 @@ $preto-default: #333333;
     font-weight: 700;
     padding: 0px 10px;
     font-weight: 700;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 992px) {
+  .main-header .item-satisfaction {
+    padding-right: 15px !important;
     margin-top: 5px;
   }
 }
