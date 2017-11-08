@@ -1,19 +1,19 @@
 .advertisement {
   @extend .wrapper;
-  @extend .mt-20;
-  
-  .item:last-child {
-    margin: 0%;
+  @extend .mt-20;  
+ 	
+ 	.items:first-child {
+  	padding-left: 0px;
   }
-  .item {
+  .item {  	
     padding: 0px;
     position: relative;    
     height: 90px;
     background-color: $azul;
     padding: 10px;
     @include flex-position(row, wrap, flex-end, center); 
-    width: 23.5%;
-    margin-right: 2%;    
+    // width: 23.5%;
+    // margin-right: 2%;    
     h3 {
       font-family: 'Open Sans', sans-serif;
       margin: 0px;
@@ -39,6 +39,14 @@
     }
   }
 }
+@media (max-width: 992px) {
+	.advertisement {
+		.item {
+			// width: 47%;
+		}
+	}   
+}
+
 /* Notícias */
 .sec-news {
 	margin-bottom: 60px;
