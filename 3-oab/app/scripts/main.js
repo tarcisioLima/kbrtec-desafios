@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	$(document).scroll(function(){
 		let scrollPosition = $(this).scrollTop();
 		console.log(scrollPosition);
@@ -12,12 +11,14 @@ $(document).ready(function(){
 		}
 	});
 
-
-
-
-
-
-
+	$(".active-conv").on("click", function(evt) {
+	    if ($("#conv").attr("size") == $("#conv").attr("size")) {
+	        $("#conv").attr("size", 1);
+	    } else {
+	        $("#conv").attr("size", $("#conv").attr("size"));
+	        $("#conv").focus();
+	    }    
+	});
 
 
 	//Slider
