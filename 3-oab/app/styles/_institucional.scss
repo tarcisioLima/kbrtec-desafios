@@ -1,0 +1,68 @@
+/* Institucional Page */
+.institucional-area {
+	font-family: 'Open Sans', sans-serif;
+	
+.quick-menu {
+	ul {
+		width: 80%;
+		.active {
+			background: $vermelho;
+			a { 
+				color: #fff;
+				&:before {
+					color: #fff;
+				}
+			}
+		}
+		li {
+			display: block;
+			background: #f5f5f5;
+			width: 100%;
+			margin: 5px 0px;
+			cursor: pointer;
+			border-radius: 5px;
+			&:hover {			
+				@extend .active;
+			}
+			a {
+					color: $vermelho;
+					display: block;
+					padding: 10px;
+					font-weight: 600;
+					&:before {
+						content: "\f105";
+	      		font-family: FontAwesome;
+						color: $vermelho;
+						margin-right: 10px;						
+					}
+				}
+			}
+		}
+	}
+}
+.new-h2-default {
+	font-size: 30px;
+	color: $vermelho;
+	margin-top: 0px;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+}
+.quick-content {
+	h2 {
+		margin-bottom: 100px;
+	}
+	.highlight {
+		color: $vermelho;
+		font-weight: 600;
+	}
+	p {
+		margin: 25px 0px;
+		font-weight: 300;	
+	}
+	.item-article {
+		display: none;
+	}
+	.active {
+		display: block;
+	}
+}

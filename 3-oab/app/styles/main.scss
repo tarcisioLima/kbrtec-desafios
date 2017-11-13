@@ -117,6 +117,7 @@ $preto-default: #333333;
 
 /* Navbar */
 .main-nav {
+  margin-bottom: 0px;
   @extend .bg-cinza;
   .navbar-nav > li {
     min-height: 50px;
@@ -512,6 +513,7 @@ $preto-default: #333333;
   background: $azul;
   font-family: 'Open Sans', sans-serif;
   color: #fff;
+  margin-top: 60px;
   min-height: 150px;
   padding-top: 25px;
   .row > div {    
@@ -687,5 +689,38 @@ $preto-default: #333333;
     width: 95%;
   }
 }
+/* Breadcrumb */
+.breadcrumb {
+  font-family: 'Open Sans', sans-serif;
+  color: $azul;
+  background: #fff;
+  
+  ul {
+    min-height: 50px;
+    padding: 15px;
+    box-shadow: 0px 9px 9px -1px rgba(0,0,0,0.14);
+    li {
+      display: inline-block;
+      margin-right: 10px;
+      
+      &:after {
+        content: "\f105";
+        font-family: FontAwesome;
+        margin-left: 15px;
+      }
+      &:last-child:after {
+        content: '';
+      }
+      a:hover {
+        color: $vermelho;
+      }
+      .current-page {
+        color: $vermelho;
+      }
+    }
+  }
+}
+
 @import "reset";
 @import "home";
+@import "institucional";
