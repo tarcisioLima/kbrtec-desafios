@@ -66,3 +66,12 @@
 		display: block;
 	}
 }
+@media (max-width: 768px) {
+	.institucional-area .quick-menu ul {
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	.quick-content h2 {
+		margin-bottom: 20px;
+	}
+}
