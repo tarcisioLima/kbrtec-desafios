@@ -52,6 +52,13 @@ $preto-default: #333333;
     }
   }
 }
+.new-h2-default {
+  font-size: 30px;
+  color: $vermelho;
+  margin-top: 0px;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+}
 .al-left {
   text-align: center;
 }
@@ -724,3 +731,4 @@ $preto-default: #333333;
 @import "reset";
 @import "home";
 @import "institucional";
+@import "eventos";

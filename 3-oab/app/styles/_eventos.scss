@@ -1,0 +1,91 @@
+.eventos {
+	font-family: 'Open Sans', sans-serif;
+	h2 {
+		margin-bottom: 50px;
+		 &:before {
+		 	content: url('../images/event-title.png');
+		 	display: inline-block;
+		 	margin-right: 15px;
+		 	transform: translateY(5px);
+		 }
+	}
+	.item {
+		width: 100%;
+		margin-bottom: 50px;
+		figure {
+			position: relative;
+			a {
+				border-radius: 5px;
+				position: absolute;
+				right: 10px;
+				bottom: 10px;
+				background: #971919;
+				font-weight: 800;
+				text-transform: uppercase;
+				color: #fff;
+				text-align: center;
+				padding: 8px 25px;
+				font-size: 12px;
+				 i {
+				 	margin-left: 10px;
+				 }
+			}
+		}
+		img {
+			width: 100%;
+			// height: 100%;		
+			border-radius: 15px;	
+		}		
+		.date-time {
+			margin-top: 15px;
+			display: inline-block;
+			font-size: 12px;
+			color:  $vermelho;
+		}
+		p {
+			font-size: 14px;
+			font-weight: 300;
+			span {
+				font-weight: 700;
+			}
+		}
+	}
+}
+.pagination {
+	font-family: 'Open Sans', sans-serif;
+	color: #000;
+	font-weight: 600;
+	width: 100%;
+	@include flex-position();
+	.paginator {
+		.active {
+			color: $vermelho;
+			border: 2px solid $vermelho;
+			border-radius: 10px;
+			padding: 6px 4px;
+
+		}
+		.prev:before {
+			content: url('../images/paginator-left.png');
+			transform: translate(-20px, -1px);
+		}
+		.next:after {
+			content: url('../images/paginator-right.png');
+			transform: translate(20px, -1px);
+		}
+		.prev, .next, .prev:before, .next:after{
+			display: inline-block;
+		}
+		ul {
+			display: inline-block;
+			margin: 0px 15px;
+		 	li {
+				display: inline-block;
+				margin: 0px 5px;
+				 a:hover {
+					color: $vermelho;
+				}
+			}
+		}
+	}
+}
