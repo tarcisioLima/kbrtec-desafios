@@ -4,7 +4,9 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
-    "swiper": "^4.0.3"
+    "swiper": "^4.0.3",
+    "slick": "*",
+    "slick-carousel": "^1.8.1"
   },
   "overrides": {
     "bootstrap-sass": {

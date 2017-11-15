@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$(document).scroll(function(){
 		let scrollPosition = $(this).scrollTop();
-		console.log(scrollPosition);
+		//console.log(scrollPosition);
 		if(scrollPosition > 255) {
 			$('.navbar').css('margin-top', '0px');
 			$('.navbar').addClass('navbar-fixed-top');
@@ -11,12 +11,12 @@ $(document).ready(function(){
 		}
 	});
 
-	$(".active-conv").on("click", function(evt) {
-	    if ($("#conv").attr("size") == $("#conv").attr("size")) {
-	        $("#conv").attr("size", 1);
+	$('.active-conv').on('click', function(evt) {
+	    if ($('#conv').attr('size') == $('#conv').attr('size')) {
+	        $('#conv').attr('size', 1);
 	    } else {
-	        $("#conv").attr("size", $("#conv").attr("size"));
-	        $("#conv").focus();
+	        $('#conv').attr('size', $('#conv').attr('size'));
+	        $('#conv').focus();
 	    }    
 	});
 
