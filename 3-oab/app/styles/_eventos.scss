@@ -29,6 +29,13 @@
 				 i {
 				 	margin-left: 10px;
 				 }
+				 &:hover {
+				 	transition: 0.4s;
+				 	transform: scale(1.1);
+				 }
+				 &:hover img {
+				 	transition: 0.4s;				 	
+				 }
 			}
 		}
 		img {
