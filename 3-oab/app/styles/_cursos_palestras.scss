@@ -1,0 +1,58 @@
+/* Listagem - JS SOCIAL BAIXAR PLUGIN
+*/
+
+.curso-palestra {
+	font-family: 'Open Sans', sans-serif;
+	.disclaimer {
+		color: $azul;
+		font-size: 22px;
+	}
+	.item-cp {
+		padding: 15px 0px 25px 0px;
+		margin-top: 15px;
+		&:hover {
+			background: #f5f5f5;
+		}
+		h3 {
+			color: #af2623;
+			font-weight: 600;
+			margin: 20px 0px;
+		}
+		span {
+			font-weight: 700;
+			color: #000;
+			display: inline-block;
+			margin-bottom: 5px;
+		}
+		p {
+			font-weight: 300;
+			margin-bottom: 25px;
+		}
+		.subscribe {
+			background: #af2623;
+			color: #fff;
+			border-radius: 5px;
+			padding: 7px 25px;
+			transition: 0.4s;
+			transform: scale(1.1);
+			display: inline-block;
+		}
+	}
+	.date-area {
+		span {
+			text-align: center;
+			font-weight: 400;
+			& > span {
+				color: $vermelho;
+			}
+		}
+	}
+}
+@media(max-width: 768px) {
+	.curso-palestra .date-area {
+		margin-top: 12px;
+	}
+}
+
+
+/* Integra */
