@@ -66,5 +66,175 @@
 
 /* Integra */
 .curso-palestra-integra {
-	
+	font-family: 'Open Sans', sans-serif;
+	.created-date {
+		span {
+			color: #e82a2c;
+		}		
+	}
+	.subscribe-end {
+			background: #af2623;
+			color: #fff;
+			border-radius: 5px;
+			padding: 10px 25px;
+			transition: 0.4s;
+			transform: scale(1.1);
+			display: block;
+			margin: 50px auto 0px auto;
+			width: 150px;
+			text-align: center;
+
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+		.carousel-cp {
+			margin-top: 30px;
+			position: relative;
+		
+		& > div {
+			border: 3px solid $vermelho;
+			padding: 0px;
+			height: 400px;
+			margin: 0px;
+			border-radius: 10px;
+		}
+		img {			
+			height: 400px;
+			width: 100%;
+			display: block;
+			object-fit: cover;
+		}
+		.slick-prev, .slick-next {
+			display: none !important;
+		}
+		.slick-dots {
+			position: absolute;
+			bottom: 10px;
+			left: 30px;
+			li {
+				margin-right: 5px;
+				color: #fff;
+				cursor: pointer;
+				width: 20px;
+				text-align: center;
+				height: 20px;
+				border-radius: 50%;
+				background: $vermelho;
+				opacity: 0.4 !important;
+				display: inline-block;
+			}
+			.slick-active {
+				background: $vermelho;
+				opacity: 1 !important;
+			}
+			.slick-prev-active {
+				opacity: 0.7;
+			}
+		}		
+	}
+	.info-data {
+		margin-top: 30px;
+		@include flex-position(row, wrap, flex-start);
+		.dt-inicio {
+			margin-right: 50px;
+		}
+		.dt-inicio .title, .dt-inicio .data,
+		 .dt-termino .title {
+			display: block;
+		}
+		.dt-inicio .title, .dt-termino .title {
+				color: $azul;
+				font-weight: 600;
+				font-size: 22px;
+		}
+		.dt-inicio .data, .dt-termino .data {
+				font-weight: 600;
+				color: $vermelho;
+				font-size: 16px;
+		}
+		.dt-inicio .title:before {
+				content: url('../images/cp-icon1.png');
+		}
+		.dt-termino .title:before {
+				content: url('../images/cp-icon2.png');
+		}
+		.dt-inicio .title:before, .dt-termino .title:before {				
+				display: block;
+			  float: left;
+			  margin-top: 6px;
+			  margin-right: 10px;
+			}
+		}
+		.content {
+			margin-top: 50px;
+			p {
+				font-weight: 300;
+				font-size: 16px;
+			}
+		}		
+}
+.info-box {
+		margin-top: 50px;
+		.item-info .title {
+				color: $azul;
+				display: block;
+				font-weight: 600;
+				font-size: 22px;
+		}
+		.item-info .data {
+				font-weight: 600;
+				color: $vermelho;
+				font-size: 16px;
+		}
+		.item-info:nth-child(1) .title:before {
+				content: url('../images/cp-person.png');
+		}
+		.item-info:nth-child(2) .title:before {
+				content: url('../images/cp-cover.png');
+		}
+		.item-info:nth-child(3) .title:before {
+				content: url('../images/cp-people.png');
+		}
+		.item-info .title:before {				
+				display: block;
+			  float: left;
+			  margin-top: 6px;
+			  margin-right: 10px;
+		}	
+}
+
+#cadastro-cp {
+	margin-top: 80px;
+	background: #f5f5f5;
+	padding: 30px;
+
+	.divisor {		
+
+		label {
+			display: block;
+			color: #6f6f6f;
+			font-weight: 700;
+		}
+		input[type=text], input[type=email], input[type=tel] {
+			border: 1px solid #e6e6e6;
+			outline: none;
+			height: 45px;
+			font-size: 22px;
+			background: #f5f5f5;
+			width: 100%;
+		}
+		input[type=submit] {
+			border: none;
+			background: $vermelho;
+			color: #fff;
+			margin-top: 27px;
+			padding: 7px 25px;
+			transition: 0.4s;
+			border-radius: 5px;
+			&:hover {
+				transform: scale(1.1);
+			}			
+		}
+	}
 }
