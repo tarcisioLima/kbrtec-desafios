@@ -115,7 +115,18 @@ $preto-default: #333333;
 .button-default:hover {
   color: #fff
 }
-
+.default-red-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: $vermelho;
+  color: #fff !important;
+  font-weight: 600;
+  border-radius: 5px;
+  &:hover {
+    transition: 0.4s;
+    transform: scale(1.1);
+  }
+}
 @mixin flex-position($position: row, $wrap: wrap, $x-axis: center, $y-axis: center) {
   display: flex;
   flex-flow: $position $wrap;
