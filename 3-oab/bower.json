@@ -6,7 +6,8 @@
     "modernizr": "~2.8.1",
     "swiper": "^4.0.3",
     "slick": "*",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "jquery.maskedinput": "^1.4.1"
   },
   "overrides": {
     "bootstrap-sass": {

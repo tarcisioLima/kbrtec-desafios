@@ -1,0 +1,87 @@
+.contato {
+	font-family: 'Open Sans', sans-serif;
+	#contato {
+		margin-top: 25px;
+		label {
+			display: block;
+			color: #747474;
+			font-weight: 400;
+		}
+		[type=text],[type=email],[type=tel],  {
+			width: 100%;
+			height: 50px;
+			outline: none;
+			padding: 0px 10px;
+			background: #fff;
+			font-size: 22px;
+			border: 1px solid #d8d8d8;
+		}
+		textarea {	
+			border: 1px solid #d8d8d8;
+			resize: none;
+			outline: none;
+			width: 100%;
+		}
+		[type=submit] {
+			border: none;			
+			font-weight: 700;
+			width: 150px;
+			display: inline-block;
+			padding: 10px 20px;
+			color: #fff;
+			background: #24547e;
+			border-radius: 5px;
+			&:hover {
+				transition: 0.4s;
+				transform: scale(1.1);
+			}
+		}		
+	}
+.alert-info {
+	display: none;
+}
+	.address {
+		h2 {
+			font-size: 22px;
+			&:before {
+				content: "\f0da";
+				font-family: FontAwesome;
+				color: #333333;
+				font-size: 16px;
+    		margin-right: 10px;
+			}
+		}
+		#contatoMapa {
+			width: 100%;
+			height: 340px;
+		}
+		.detailed {
+			margin-top: 22px;
+			@include flex-position(row, wrap, flex-start, center);
+			& > div {
+				// display: block;
+				// width:46%;
+				// margin-right: 2%;
+				&:nth-child(2) {
+					p span {
+						font-weight: 700;
+					}
+				}
+				.title {
+					font-weight: 700;
+					color: $vermelho;
+					font-size: 16px;
+				}
+				.fa {
+					font-size: 26px;
+					margin-right: 10px;
+				}
+				p {
+					margin-top: 5px;
+					margin-left: 30px;
+				}
+			}
+			
+		}
+	}
+}

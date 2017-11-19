@@ -32,6 +32,7 @@
 			.link {
 				color: $vermelho;
 				font-weight: 700;
+				word-wrap: break-word;
 				&:hover {
 					color: $azul;
 				}
@@ -44,6 +45,7 @@
 					padding: 10px 20px;
 					border-radius: 5px;
 					display: inline-block;
+					width: 150px;
 					margin-top: 50px;
 					.fa {
 						margin-right: 5px;
@@ -97,6 +99,7 @@
 			.link {
 				color: $vermelho;
 				font-weight: 600;
+				word-wrap: break-word;
 				&:hover {
 					color: $azul;
 				}
@@ -108,6 +111,7 @@
 					padding: 10px 20px;
 					border-radius: 5px;
 					display: inline-block;
+					width: 150px;
 					margin-top: 50px;
 					margin-left: 50px;
 					.fa {
@@ -158,5 +162,11 @@
 	}
 	.convenio-items {
 		margin-top: 60px;
+	}
+}
+@media (max-width: 576px) {
+	.convenio-integra .conv-box .tel {
+		display: block;
+		margin-left: 0px;
 	}
 }
