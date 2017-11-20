@@ -25,7 +25,7 @@ $vermelho: #aa3337;
 $azul: #24547e;
 $cinza: #a2a2a2;
 $preto-default: #333333;
-
+$cinza-escuro: #454545;
 .first-title {
   font-family: 'Open Sans', sans-serif;
   font-size: 30px;
@@ -74,6 +74,9 @@ $preto-default: #333333;
 }
 .bg-blue {
   background: $azul;
+}
+.bg-cinza-escuro {
+  background: $cinza-escuro;
 }
 .bg-cinza {
   background: $cinza !important;
@@ -749,3 +752,5 @@ $preto-default: #333333;
 @import "cursos_palestras";
 @import "convenios";
 @import "contato";
+@import "vagas-curriculos";
+@import "vagas";

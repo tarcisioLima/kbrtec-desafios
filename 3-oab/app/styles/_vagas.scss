@@ -1,0 +1,171 @@
+.vagas-listagem {
+	font-family: 'Open Sans', sans-serif;
+	.search-box {
+		h2 {
+			margin-top: 0px;
+		}
+		@include flex-position(row, wrap, space-between, center);
+		#search-job {			
+			.form-group {
+				// margin: 12px;
+				margin-bottom: 0px;
+				margin-left: 10px;
+				display: inline-block;
+				label {
+					display: block;
+					font-weight: bold;
+					color: #969696;
+				}
+				select {
+					width: 100%;
+					height: 40px;
+					font-family: 'Open Sans', sans-serif;
+					font-weight: 300;
+					border: 1px solid #dbdbdb;
+				}
+				[type=submit] {
+					background: $azul;
+					color: #fff;
+					border: none;
+			    height: 40px;
+			    padding: 10px 30px;
+			    border-radius: 5px;
+			    &:hover {
+			    	transition: 0.4s;
+			    	transform: scale(1.1);
+			    }
+				}
+			}
+		}		
+	}
+.list-vagas {
+		.item-vaga {
+			display: flex;
+	    flex-flow: row wrap;
+	    // align-items: center;
+			padding: 15px;
+			h3 {
+				color: #af2623;
+				font-weight: 600;
+				margin: 20px 0px;
+			}
+			span {
+				display: block;
+				margin-bottom: 5px;
+			}
+			.saiba-mais {
+				margin-top: 40px;
+				background: #af2623;
+				color: #fff;
+				border-radius: 5px;
+				padding: 7px 25px;
+				transition: 0.4s;
+				transform: scale(1.1);
+				display: inline-block;
+				&:hover {
+					transform: scale(1.2);
+				}
+			}
+			&:hover {
+				background: #f5f5f5;
+			}
+		}
+		.date-area {	
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;		
+			span {				
+				text-align: center;
+				font-weight: 400;
+				& > span {
+					color: $vermelho;
+				}
+			}
+			.company-name {
+				color: $azul;
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.vagas-listagem {
+		h2 {
+			margin-bottom: 30px;
+		}
+	}
+	.vagas-listagem .list-vagas .date-area {
+		padding-top: 15px;
+		span {
+			text-align: left;
+		}
+	}
+	.vagas-listagem .search-box {
+		flex-direction: column;
+		justify-content: flex-start;
+		width: 100%;
+	}
+	.vagas-listagem .search-box #search-job .form-group {
+		display: block;
+
+		select {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		[type=submit] {
+			margin-top: 20px;
+			width: 100%;
+		}
+	}
+}
+.vagas-integra {
+	font-family: 'Open Sans', sans-serif;
+	.top {
+		.default-red-button {
+			width: 150px;
+			text-align: center;
+		}
+		@include flex-position(row,wrap, space-between)
+	}
+	.vaga-title {		
+  	position: relative;
+    background: #ededed;
+    padding: 20px 10px;
+    border-radius: 10px;    
+    h3 {
+    	margin: 0px;
+    	color: #24547e;
+    	font-size: 22px;
+    	font-weight: 600;
+    }
+    .created {
+    	color: $vermelho;
+    	position: absolute;
+    	top: -30px;
+    	right: 10px;
+    }
+	}
+	.cabecalho-box {
+			background: #ededed;
+			color: $azul;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			font-weight: 600;
+			text-transform: uppercase;
+			padding: 10px 20px;
+			font-size: 16px;
+		}
+	.box-vaga {
+		background: #f6f5f1;
+		border-radius: 10px;
+	}
+	.about {	
+		p {	
+			padding: 30px 30px;
+			span {
+				font-weight: 300;
+				display: block;
+				margin-top: 10px;
+			}
+		}
+	}
+}

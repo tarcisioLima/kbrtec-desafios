@@ -1,0 +1,161 @@
+/* Vagas e curriculos */
+.vagas-curriculos {
+	font-family: 'Open Sans', sans-serif;
+	.default-red-button {
+			margin-bottom: 10px;
+			// float: right;
+			font-weight: 300;
+			text-align: center;
+			font-size: 22px;
+			span {
+				font-weight: 700;			
+			}
+			&:after {
+				content: '';
+				clear: both;
+			}
+	}
+	.forgot-pwd {
+		margin-top: 30px;
+		display: flex;
+    flex-direction: column;
+		p {
+			margin-top: 10px;
+			font-size: 14px;
+    	display: inline-block;
+			text-align: right;
+			a {
+				color: $vermelho;
+				&:hover {
+					color: $azul;
+				}
+			}
+		}	
+	}
+	.options {
+		margin-top: 10px;
+	}
+	.item-c, .item-e {
+		figure {
+			position: relative;
+
+			.pelicula {
+				position: absolute;
+		    width: 100%;
+		    height: 100%;
+		    top: 0;
+		    left: 0;
+				background: transparent;
+				border-radius: 5px;				
+				@include flex-position();
+				&:hover {
+					transition: 0.4s;
+					background: rgba(0,0,0, 0.4);
+				}
+				a {
+					font-weight: 300;
+					font-size: 20px;
+					color: #fff;
+					padding: 10px 10px;
+					border-radius: 5px;
+					display: inline-block;
+					width: 250px;
+					span {
+						font-weight: 700;
+					}
+					&:hover {
+						transition: 0.4s;
+						transform: scale(1.1);
+					}
+				}			
+			}
+			img {
+				height: 257px;
+				width: 100%;
+				border-radius: 5px;
+			}
+		}
+	}
+	.ultimas-vagas {
+		margin-top: 100px;
+		.second-title-section span:before {
+			display: none;
+		}		
+		.item-box {	
+			&:first-child {
+			border-right: 1px solid #ececec;
+		}
+			&:nth-child(1) {
+				padding-right: 10%;
+			}
+			&:nth-child(2) {
+				padding-left: 10%;
+			}
+			.item {
+				.top {
+					h3 {
+					 	margin-top: 0px;
+					 	margin-bottom: 20px;
+					 	color: $vermelho;
+					 }	
+					@include flex-position(row,wrap,space-between);
+					.publish-date {									
+						span {
+							font-size: 14px;
+							span {
+								color: $vermelho;
+								display: block;
+							}
+						}
+					}
+				} /* Top end*/
+				.endereco, p, .company {
+					font-weight: 300;					
+					display: block;
+				}
+				.company {
+					color: $azul;
+					margin: 30px 0px;
+				}
+				.default-red-button {
+					padding: 5px 20px;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+	.see-more {
+		background: $azul;
+		color: #fff;
+		width: 200px;
+		display: block;
+		margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    font-weight: 600;
+    padding: 12px 20px;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: uppercase;
+		&:hover {
+			transition: 0.4s;
+			transform: scale(1.1);
+		}
+	}
+}
+@media (max-width: 768px) {
+	.vagas-curriculos .options {
+		.item-e {
+			margin-top: 12px;
+		}
+	}
+	.vagas-curriculos .ultimas-vagas {
+		.item-box:first-child {
+			border-right: none;
+		}		
+		.item-box {
+			padding: 0px !important;
+			margin-bottom: 20px;	
+		}
+	}
+}

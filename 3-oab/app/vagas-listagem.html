@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>OAB - Contato</title>     
+    <title>OAB - Vagas Listagem</title>     
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
@@ -88,66 +88,112 @@
       <ul>
         <li>Você está em</li>
         <li><a href="index.html">Home</a></li>
-        <li><a href="eventos.html" class="current-page">Contato</a></li>
+        <li><a href="eventos.html" class="current-page">Vagas Listagem</a></li>
       </ul>
     </div>
   </div>
 </section>
 <!-- Aqui -->
-<div class="section container-fluid contato">
+<section class="container-fluid vagas-listagem mt-50">
   <div class="wrapper">
-    <h2 class="new-h2-default mt-20">Contato</h2>
-    <div class="row">
-      <div class="col-md-4 col-sm-4">
-        <form action="" method="post" id="contato">
+    <div class="search-box">
+      <h2 class="new-h2-default">Vagas de Emprego</h2>
+        <form action="" id="search-job">
           <div class="form-group">
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome" required>
+              <label for="especialidade">Selecione uma especialidade</label>
+              <select name="especialidade" id="especialidade">
+              <option disabled selected value></option>
+              <option value="0">Fazedor de caféeeeeeeeeeeeeeeeeee</option>
+              <option value="1">Joga bola bem</option>
+              <option value="2">Faz bolo gostoso</option>
+            </select>
           </div>
           <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" required>
+            <label for="uf">UF</label>
+            <select name="uf" id="uf">
+              <option disabled selected value></option>
+              <option value="SP">SP</option>
+              <option value="RJ">RJ</option>
+              <option value="ES">ES</option>
+            </select>
           </div>
           <div class="form-group">
-            <label for="telefone">Telefone</label>
-            <input type="tel" name="telefone" id="telefone" required>
+            <label for="cidade">Cidade</label>
+              <select name="cidade" id="cidade">
+                <option disabled selected value></option>
+                <option value="0">Santos</option>
+                <option value="1">São Vicente</option>
+                <option value="2">Guarujá</option>
+            </select>
           </div>
           <div class="form-group">
-            <label for="mensagem">Sua mensagem</label>
-            <textarea name="" id="mensagem" id="mensagem" cols="30" rows="6"></textarea>
-          </div>
-          <div class="form-group">
-            <input type="submit" value="Enviar">
+            <input type="submit" value="Procurar">
           </div>
         </form>
-        <div class="alert alert-info resp">
-          <strong>Obrigado!</strong> Sua mensagem foi enviada com sucesso
+    </div>
+    <div class="list-vagas mt-50">
+      <div class="row item-vaga">
+          <div class="col-md-9 col-sm-9 col-xs-12">
+            <h3>Direito Processual Civil</h3>
+            <div>          
+              <span>Santos - SP</span>
+              <span>Informatica, TI, Telecomunicações</span>
+            </div>
+            <a href="#" class="saiba-mais">Saiba mais</a>
           </div>
-      </div>
-      <div class="col-md-8 col-sm-8 address">
-        <h2>Mapa localização</h2>
-        <div id="contatoMapa"></div>
-          <div class="detailed row">
-              <div class="col-md-6">
-                <span class="title"><i class="fa fa-map-marker" aria-hidden="true"></i> Endereço</span>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur 
-                  adipiscing elit, sed do eiusmod
-                  tempor incididunt ut.
-                </p>
-              </div>
-              <div class="col-md-6">
-                <span class="title"><i class="fa fa-phone" aria-hidden="true"></i> Contato</span>
-                <p>
-                  <span>(00)</span>0000-0000 <br>
-                  <span>(00)</span>0000-0000 <br>
-                </p>
-              </div>
+          <div class="col-md-3 col-sm-3 col-xs-12 date-area">
+            <span> Publicado em <span>22/05/2017</span></span>
+            <p class="company-name">
+              Empresa com nome confidencial
+            </p>
           </div>
+        </div>
+        <div class="row item-vaga">
+          <div class="col-md-9 col-sm-9 col-xs-12">
+            <h3>Direito Processual Civil</h3>
+            <div>          
+              <span>Santos - SP</span>
+              <span>Informatica, TI, Telecomunicações</span>
+            </div>
+            <a href="#" class="saiba-mais">Saiba mais</a>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-12 date-area">
+            <span> Publicado em <span>22/05/2017</span></span>
+            <p class="company-name">
+              Empresa com nome confidencial
+            </p>
+          </div>
+        </div>
+        <div class="row item-vaga">
+          <div class="col-md-9 col-sm-9 col-xs-12">
+            <h3>Direito Processual Civil</h3>
+            <div>          
+              <span>Santos - SP</span>
+              <span>Informatica, TI, Telecomunicações</span>
+            </div>
+            <a href="#" class="saiba-mais">Saiba mais</a>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-12 date-area">
+            <span> Publicado em <span>22/05/2017</span></span>
+            <p class="company-name">
+              Empresa com nome confidencial
+            </p>
+          </div>
+        </div>
       </div>
-    </div>  
+      <div class="row pagination mt-50">
+        <div class="paginator">
+          <a href="#" class="prev">Anterior</a>
+          <ul>
+            <li><a class="active" href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+          </ul>
+          <a href="#" class="next">Próximo</a>     
+        </div>
+    </div>
   </div>
-</div>
+</section>
 <footer class="container-fluid main-footer">
   <div class="wrapper">
     <div class="row mb-20 fst">
@@ -243,10 +289,7 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
     
-    <!-- build:js scripts/main.js -->    
-     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTfpkJPFo2CQ1g6E9v6TrCzELTHwWFQ34&callback=contatoMapa"
-  type="text/javascript"></script>
-    <script src="scripts/contato.js"></script>     
+    <!-- build:js scripts/main.js -->        
     <script src="scripts/main.js"></script>   
     <!-- endbuild -->  
   </body>
