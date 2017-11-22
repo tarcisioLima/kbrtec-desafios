@@ -1,5 +1,14 @@
 .noticias-integra {
 	font-family: 'Open Sans', sans-serif;
+	#social-media-box {
+		display: flex;
+    	flex-flow: row wrap;
+    	justify-content: flex-end; 
+    	.print {
+    		background: red;
+    		display: block;
+    	}
+	}
 	.news-box {
 		.title-news {
 			margin-top: 40px;
@@ -36,7 +45,7 @@
 					width: 100%;
 				}
 				img {
-					margin-bottom: 50px;							
+					margin-bottom: 20px;							
 				}
 		}
 	}

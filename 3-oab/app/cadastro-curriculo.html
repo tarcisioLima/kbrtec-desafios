@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>OAB - Noticias Integra</title>     
+    <title>OAB - Cadastrar currículo</title>     
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
@@ -14,8 +14,7 @@
     <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
     <link rel="stylesheet" href="/bower_components/jssocials/dist/jssocials.css" />
     <!-- endbower -->
-    <!-- endbuild -->
-    <link rel="stylesheet" href="/bower_components/jssocials/dist/jssocials-theme-flat.css" />
+    <!-- endbuild -->    
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -89,74 +88,138 @@
     <div class="row">
       <ul>
         <li>Você está em</li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="eventos.html" class="current-page">Notícias</a></li>
+        <li><a href="index.html">Home</a></li>        
+        <li><a href="cadastrar-curriculo.html" class="current-page">Cadastrar currículo</a></li>
       </ul>
     </div>
   </div>
 </section>
-<section class="container-fluid noticias-integra">
+<!-- Aqui -->
+<section class="container-fluid mt-50 cadastro">
   <div class="wrapper">
-  <h2 class="second-title-section"><span>Notícias</span> da OAB Praia Grande</h2>
-    <div class="row">
-      <div class="col-md-8 col-sm-8 col-xs-12 news-box">        
-        <div class="title-news">
-          <span class="date-news">17/09/2016</span>
-          <h2>Sociosqu consectetur In mi consectetur justo habitasse In mi consectetur.</h2>
-        </div>
-        <figure>
-          <img src="images/noticia-integra.jpg" class="img-responsive" alt="">
-        </figure>
-         <div id="social-media-box">
-           <div class="print">Imprimir</div>
-         </div>    
-        <p>
-          Sed ut perspiciatis <span> quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam </span> voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum. 
-        </p>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, <span> sed quia consequuntur</span> magni dolores eos qui.Ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non  eius modi tempora incidunt ut labore et dolore agnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, numquam eius modi tempora incidunt ut labore et dolore nemo enim ipsam voluptatem quia voluptas sit aspernatu.
-        </p>
-        <p>
-          Et dolore agnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, numquam eius modi tempora incidunt ut labore et dolore nemo enim ipsam voluptatem quia voluptas sit aspernatu ad minima veniam.
-        </p>
-      </div>
-      <div class="col-md-4 col-sm-4 col-xs-12 read-aswell">
-        <h3>Leia também</h3>
-        <!-- <div style="clear: both"></div> -->
-        <div class="col-md-12 item-news">
-          <h4><a href="#">Abordagens de estudo do Direito no brasil</a></h4>
-          <span class="published-date">Publicado em <span>20/05/2016</span></span>
-          <p>
-            Prefeitura discute com EMTU Duplicação de via na Área Continental
-          </p>
-          <a class="read-more" href="#">Leia mais</a>
-        </div>
-        <div class="col-md-12 item-news">
-          <h4><a href="#">Abordagens de estudo do Direito no brasil</a></h4>
-          <span class="published-date">Publicado em <span>20/05/2016</span></span>
-          <p>
-            Prefeitura discute com EMTU Duplicação de via na Área Continental
-          </p>
-          <a class="read-more" href="#">Leia mais</a>
-        </div>
-        <div class="col-md-12 item-news">
-          <h4><a href="#">Abordagens de estudo do Direito no brasil</a></h4>
-          <span class="published-date">Publicado em <span>20/05/2016</span></span>
-          <p>
-            Prefeitura discute com EMTU Duplicação de via na Área Continental
-          </p>
-          <a class="read-more" href="#">Leia mais</a>
-        </div>
-        <div class="col-md-12 item-news">
-          <h4><a href="#">Abordagens de estudo do Direito no brasil</a></h4>
-          <span class="published-date">Publicado em <span>20/05/2016</span></span>
-          <p>
-            Prefeitura discute com EMTU Duplicação de via na Área Continental
-          </p>
-          <a class="read-more" href="#">Leia mais</a>
-        </div>
-      </div>     
-    </div>
+    <!-- Side menu -->
+    <aside class="col-md-4 col-xs-12 col-sm-4 quick-menu">
+      <ul>
+        <li><a href="#">Área restrita</a></li>
+        <li class="active" data-item="cadastro-curriculo"><a>Cadastrar Currículo</a></li>
+        <li data-item="cadastro-empresa"><a>Cadastrar Empresa</a></li>
+        <li><a href="#">Vagas Disponíveis</a></li>
+      </ul>
+    </aside>
+    <!-- Form area CURRICULO-->
+    <section class="col-xs-12 col-sm-8 col-md-8 cadastro-curriculo">
+      <h2 class="new-h2-default">Cadastrar currículo</h2>
+      <form action="" method="" id="form-curriculo" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Dados básicos</legend>
+            <div class="divisor">
+              <label for="nome">Nome</label>
+              <input type="text" name="nome" id="nome">
+            </div>
+            <div class="divisor">
+              <label for="email">E-mail</label>
+              <input type="email" name="email" id="email">
+            </div>
+            <div class="divisor">
+              <label for="cpf">CPF</label>
+              <input type="text" name="cpf" id="cpf">
+            </div>
+            <div class="divisor">
+              <label for="estado-civil">Estado civil</label>
+              <select name="estado-civil" id="estado-civil">
+                <option value="0">Casado</option>
+                <option value="1">Solteiro</option>
+                <option value="2">Viuvo(a)</option>
+              </select>
+            </div>
+            <div class="divisor">
+              <label for="nascimento">Data de nascimento</label>
+              <input type="date" id="nascimento" name="nascimento">
+            </div>
+            <div class="divisor">
+              <label>Sexo</label>
+              <label for=""><input type="radio" name="genero" id="masculino" value="masculino">Masculino</label>
+               <label for=""><input type="radio" name="genero" id="feminino" value="feminino">Feminino</label>
+            </div>
+            <div class="divisor">
+              <label for="endereco">Endereço</label>
+              <input type="text" name="endereco" id="endereco">
+            </div>
+            <div class="divisor">
+              <label for="cep">CEP</label>
+              <input type="text" name="cep" id="cep">
+            </div>
+            <div class="divisor">
+              <label for="uf">UF</label>
+              <input type="text" name="uf" id="uf">
+            </div>
+            <div class="divisor">
+              <label for="cidade">Cidade</label>
+              <input type="text" name="cidade" id="cidade">
+            </div>
+             <div class="divisor">
+              <label for="telefone">Telefone</label>
+              <input type="tel" name="telefone" id="telefone">
+            </div>
+             <div class="divisor">
+              <label for="celular">Celular</label>
+              <input type="tel" name="celular" id="celular">
+            </div>
+        </fieldset>
+        <fieldset>
+          <legend>Dados profissionais</legend>       
+           <div class="divisor">
+              <label for="especialidade">Especialidade</label>
+              <input type="text" name="especialidade" id="especialidade">
+            </div>
+           <div class="divisor">
+              <label for="posicao-cargo">Estagiário/Advogado</label>
+              <select name="posicao-cargo" id="estado-civil">
+                <option value="0">Estagiário</option>
+                <option value="1">Advogado</option>                
+              </select>
+            </div>
+            <div class="divisor">
+              <label for="cargo-desejado">Cargo desejado</label>
+              <input type="text" name="cargo-desejado" id="cargo-desejado">
+            </div>
+             <div class="divisor">
+              <label for="resumo">Breve resumo</label>
+              <input type="text" name="resumo" id="resumo">
+            </div>
+            <div class="divisor">
+              <label for="pretencao-salarial">Pretenção salarial</label>
+              <input type="text" name="pretencao-salarial" id="pretencao-salarial">
+            </div>
+        </fieldset>    
+        <fieldset>
+          <legend>Dados Idiomas</legend> 
+          <div class="divisor"> 
+            <ul class="language">
+               <li>Inglês</li>
+               <li> <label for=""><input type="radio" name="nivel" id="nivel" value="masculino">Não passuo</label></li>
+                <li> <label for=""><input type="radio" name="nivel" id="nivel" value="masculino">Básico</label></li>
+                <li> <label for=""><input type="radio" name="nivel" id="nivel" value="masculino">Intermediário</label></li>
+                <li> <label for=""><input type="radio" name="nivel" id="masculino" value="masculino">Avançado</label></li>
+            </ul>
+            <ul class="language">
+               <li>Espanhol</li>
+               <li> <label for=""><input type="radio" name="nivel" id="nivel" value="masculino">Não passuo</label></li>
+                <li> <label for=""><input type="radio" name="nivel" id="nivel" value="masculino">Básico</label></li>
+                <li> <label for=""><input type="radio" name="nivel" id="nivel" value="masculino">Intermediário</label></li>
+                <li> <label for=""><input type="radio" name="nivel" id="masculino" value="masculino">Avançado</label></li>
+            </ul>
+          </div>
+          <div class="divisor">
+            <label for="outro-lingua">Outros idiomas</label>
+            <input type="text" name="outra-lingua">
+          </div>        
+        </fieldset>
+      </form>
+      
+    </section>
+    <!-- Form area EMPRESA-->
+    <section class="cadastro-empresa"></section>
   </div>
 </section>
 <footer class="container-fluid main-footer">
@@ -256,8 +319,8 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
-    <script src="scripts/noticias-integra.js"></script>
-    <script src="scripts/main.js"></script>   
-    <!-- endbuild -->
+    <script src="scripts/cadastro.js"></script>        
+    <script src="scripts/main.js"></script> 
+    <!-- endbuild -->  
   </body>
 </html>

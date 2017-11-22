@@ -1,0 +1,93 @@
+.link-download {
+	font-family: 'Open Sans', sans-serif;
+	.list {
+		margin-top: 60px;
+		& li:last-child {
+			border-bottom: unset;
+		}
+		li {
+			padding-bottom: 20px;
+			border-bottom: 1px solid #ececec;
+			transition: 0.4s;
+			h3 {
+				color: $vermelho;
+				text-transform: uppercase;
+				font-size: 16px;
+				font-weight: 600;
+			}
+			a {
+				font-weight: 300;
+				&:before {
+					content: "\f105";
+					color: $vermelho;
+					font-family: FontAwesome;
+					font-size: 16px;
+					float: left;
+					margin-top: -5px;
+					display: block;
+					font-size: 22px;
+					margin-left: -15px;
+				}
+				&:hover {
+					color: $azul;
+				}
+			}
+			&:hover {
+				transition: 0.4s;
+				transform: translateX(10px);
+			}
+		}
+	}
+}
+.downloads {
+		font-family: 'Open Sans', sans-serif;
+	.list {
+		& > li:last-child {
+			border-bottom: unset;
+		}
+		li {
+			padding: 50px 40px 40px 30px;
+			border-bottom: 1px solid #ececec;
+			border-left: 5px solid transparent;
+			&:after {
+				content: '';
+				clear: both;
+			}
+			img {
+				display: block;
+				// float: left;
+			}
+			.data {
+				font-size: 14px;
+				color: #838383;
+				span { 
+					color: $vermelho;
+				}
+			}
+			h3 {
+				margin-top: 2px;
+				color: #000;
+				font-weight: 600;
+				font-size: 22px;
+			}
+			.baixar {
+				color: #48bb6d;
+				font-weight: 300;
+				font-size: 16px;
+				&:before {
+					content: url('../images/download-icon.png');
+					display: inline-block;
+					margin-right: 10px;				
+				}
+				&:hover {
+					color: #389957;
+				}
+			}
+			transition: 0.2s;
+			&:hover {
+				transition: 0.4s;
+				border-left: 5px solid #e91c13;
+			}
+		}
+	}
+}
