@@ -157,15 +157,180 @@
 	.box-vaga {
 		background: #f6f5f1;
 		border-radius: 10px;
-	}
-	.about {	
-		p {	
+		margin-top: 40px;
+
+		.content {
 			padding: 30px 30px;
+		}
+	}
+	.about-vaga {
+		.description {
+			font-weight: 700;
+			color: #5e5e5e;
+			display: block;
+			margin-bottom: 30px;
+			&:before {
+				content:"• ";
+				color: $azul;
+				font-size: 16px;
+			}
+		}
+		.standards {
+			width: 100%;
+			.item {
+				margin-bottom: 20px;
+				.title {
+					color: $vermelho;
+					font-weight: 700;
+					margin-right: 8px;
+				}
+			}
+		}	
+	}
+	.about {		
+		p {	
+				padding: 30px 30px; 
 			span {
 				font-weight: 300;
 				display: block;
 				margin-top: 10px;
 			}
 		}
+	}
+	.other-vaga {
+		h2 {
+			color: $azul;
+			font-weight: 600;
+			font-size: 30px;
+			margin-bottom: 30px;
+		}
+		.vagas > .item {
+			&:hover {
+				transition: 0.4s;
+				transform: scale(1.1);
+			}
+			span {
+				color: #949494;
+			}
+			h3 {
+				color: $vermelho;
+				font-size: 22px;
+				margin: 5px 0px;
+				font-weight: 700;
+				font-size: 18px;
+				&:hover {
+					color: $azul;
+				}
+			}
+		}
+		.default-red-button {
+			background: $azul;
+			margin-top: 50px;
+			text-transform: uppercase;
+			width: 200px;
+			font-weight: bold;
+			padding: 15px 20px;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+	}
+	.restric {
+		background: #f6f5f1;
+		min-height: 120px;
+		border-radius: 10px;
+		.default-red-button {
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 30px;
+			margin-bottom: 10px;
+			// width: 300px;
+			display: block;
+			background: $azul;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: bold;
+			border-radius: 3px;
+			padding: 15px 0px;		
+		}
+		.forgot {
+			text-align: center;
+			display: inherit;
+			color: #8b8a89;
+			&:hover {
+				color: $azul;
+			}
+		}
+	}
+	.resumo-vaga {
+		background: #f6f5f1;
+		padding: 20px 40px;
+		margin-top: 35px;
+		border-radius: 10px;
+		h2 {
+			color: $azul;
+			font-weight: 600;
+			font-size: 30px;
+		}
+		ul {
+			margin-top: 30px;
+			li {
+				margin-bottom: 22px;
+				span {
+					color: $vermelho;
+					font-weight: 700;					
+				}
+				p {
+					margin-top: 5px;
+					color: #8b8a89
+				}
+			}
+		}
+	}
+	.share {
+		background: #f6f5f1;
+		margin-top: 30px;
+		padding: 20px 40px;
+		border-radius: 10px;
+		.default-red-button {
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 30px;
+			margin-bottom: 10px;
+			// width: 250px;
+			display: block;
+			background: $azul;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: bold;
+			border-radius: 3px;
+			padding: 15px 0px;	
+			&:hover {
+				transform: scale(1);
+			}	
+		}
+		.share-block {
+			margin-top: 40px;
+			span {
+				color: $vermelho;
+				font-weight: 700;
+				text-align: center;
+				display: block;
+			}
+			#share {
+				color: #fff;
+				font-size: 16px;
+				@include flex-position();
+			}
+		}
+	}
+}
+@media(max-width: 768px) {
+	.vagas-integra .other-vaga .vagas > .item {
+		margin-bottom: 20px;
+		border-bottom: 1px solid $cinza;
+		padding:5px;
+	}
+	.vagas-integra .other-vaga .default-red-button {
+		width: 100%;
 	}
 }

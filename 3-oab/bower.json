@@ -7,7 +7,8 @@
     "swiper": "^4.0.3",
     "slick": "*",
     "slick-carousel": "^1.8.1",
-    "jquery.maskedinput": "^1.4.1"
+    "jquery.maskedinput": "^1.4.1",
+    "jssocials": "^1.5.0"
   },
   "overrides": {
     "bootstrap-sass": {

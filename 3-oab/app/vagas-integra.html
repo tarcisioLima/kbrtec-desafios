@@ -12,6 +12,8 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/swiper/dist/css/swiper.css" />
     <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="/bower_components/jssocials/dist/jssocials.css" />
+    <link rel="stylesheet" href="/bower_components/jssocials/dist/jssocials-theme-flat.css" />
     <!-- endbower -->
     <!-- endbuild -->    
     <!-- build:css styles/main.css -->
@@ -107,7 +109,7 @@
           <span class="created">05/08/2017 às 12:00hr</span>
           <h3 class="">Auxiliar Administrativo</h3>
         </div>
-        <div class="about mt-50 box-vaga">
+        <div class="about box-vaga">
           <header class="cabecalho-box">Sobre a empresa</header>
           <p>
             <span class="nome">KBR TEC LTDA</span>
@@ -115,8 +117,124 @@
             <span class="endereco">Santos SP</span>
           </p>
         </div>
+        <div class="box-vaga about-vaga">
+         <header class="cabecalho-box">Sobre a vaga</header>
+          <div class="content">
+            <span class="description">Descrição da vaga</span>
+            <p>
+              Está cursando ou formada em administração. Conhecimento em sistema Windows e pacote office.
+            </p>
+            <p>
+              Proficiência no idioma português (fala, leitura, escrito) ótima comunicação e habilidade em digitação experiência com digitação de textos em grande volume e relacionamento com o cliente.
+            </p>          
+            <ul class="standards row mt-50">
+              <li class="col-md-6">
+                <div class="item">
+                  <span class="title">Especialidade</span>
+                  Direito
+                </div>
+                <div class="item">
+                  <span class="title">Faixa salarial</span>
+                  Á combinar
+                </div>
+                <div class="item">
+                  <span class="title">Jornada</span>
+                  Periodo Integral
+                </div>
+              </li>
+              <li class="col-md-6">
+                <div class="item">
+                  <span class="title">N° de vagas</span>
+                  2
+                </div>
+                <div class="item">
+                  <span class="title">Tipo de contrato</span>
+                  CLT
+                </div>
+                <div class="item">
+                  <span class="title">Local</span>
+                  Santos
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="other-vaga mt-50">
+          <h2>Outras vagas</h2>
+          <div class="row vagas">
+            <div class="col-md-4 col-sm-4 col-xs-12 item">
+              <a href="#">
+                <span>05/09/2017</span>
+                <h3>Consultor de negócios</h3>
+                <span>Tupã - SP</span>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12 item">
+              <a href="#">
+                <span>05/09/2017</span>
+                <h3>Consultor de negócios</h3>
+                <span>Tupã - SP</span>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12 item">
+              <a href="#">
+                <span>05/09/2017</span>
+                <h3>Consultor de negócios</h3>
+                <span>Tupã - SP</span>
+              </a>
+            </div>
+          </div>
+          <a href="#" class="default-red-button">Ver mais vagas</a>
+        </div>        
       </div>
-      <div class="col-md-4 col-sm-4"></div>
+      <div class="col-md-4 col-sm-4 side-box">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12 restric">
+            <a href="#" class="default-red-button">Acessar área restrita</a>
+            <a href="#" class="forgot">Esqueceu sua senha?</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="resumo-vaga col-md-12">
+            <h2>Resumo da Vaga</h2>
+            <ul>
+              <li>
+                <span>Empresa</span>
+                <p>Dal Empreendimentos imobiliários Ltda</p>
+              </li>
+              <li>
+                <span>Título da vaga</span>
+                <p>Auxiliar Administrativo</p>
+              </li>
+              <li>
+                <span>Jornada</span>
+                <p>Integral</p>
+              </li>
+              <li>
+                <span>Salário</span>
+                <p>R$ 1.800 a R$ 2.500.00 (Bruto mensal)</p>
+              </li>
+              <li>
+                <span>Localidade</span>
+                <p>Bauru SP</p>
+              </li>
+              <li>
+                <span>N° de vagas</span>
+                <p>01</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 share">
+            <a href="#" id="imprimir" class="default-red-button">Imprimir vagas</a>
+            <div class="share-block">
+              <span>Compartilhe nas redes sociais</span>
+              <div id="share"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -197,6 +315,7 @@
     <script src="/bower_components/slick/dist/slick.js"></script>
     <script src="/bower_components/slick-carousel/slick/slick.js"></script>
     <script src="/bower_components/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
+    <script src="/bower_components/jssocials/dist/jssocials.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
@@ -215,8 +334,9 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
     
-    <!-- build:js scripts/main.js -->        
-    <script src="scripts/main.js"></script>   
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/vagas-integra.js"></script>        
+    <script src="scripts/main.js"></script> 
     <!-- endbuild -->  
   </body>
 </html>
