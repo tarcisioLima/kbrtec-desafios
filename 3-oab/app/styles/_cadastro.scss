@@ -1,3 +1,67 @@
 .cadastro {
 	font-family: 'Open Sans', sans-serif;
+	form {
+		margin-top: 30px;		
+		label {
+			color: #737373;
+			font-weight: bold;
+			font-size: 14px;			
+		}		
+		[type=text],[type=email], [type=tel],
+		 [type=date], select {
+			height: 50px;
+			width: 100%;
+			font-size: 18px;
+			border: 1px solid #d8d8d8;
+			padding: 0px 5px;
+		}
+		
+		fieldset {
+			legend {
+				border-bottom: none;
+				color: $vermelho;
+				font-size: 24px;
+			}
+			input[type=radio] {
+				margin-left: 15px;
+				margin-right: 5px;		
+			}
+			.masc {
+				color: $azul;
+			}
+			.fem {
+				color: $vermelho;
+			}
+			.curriculo-file {
+				input[type=file] {
+					
+				}
+			}
+			.language {				
+				 li {
+					display: inline-block;	
+					margin-right: 5px;
+					margin-bottom: 12px;	
+					&:first-child {
+						color: $vermelho;
+						font-weight: 600;					
+					}
+					label {
+						font-weight: 400;
+						color: #000;						
+					}
+					input[type=radio] {
+						margin-right: 2px;
+					}
+				}
+			}
+		}
+		.divisor {			
+			padding-left: 0px;
+			margin-bottom: 10px;		
+		}
+		.radio-align {
+			margin-top: 36px;
+		}
+	}
 }

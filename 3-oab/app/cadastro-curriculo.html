@@ -108,23 +108,24 @@
     </aside>
     <!-- Form area CURRICULO-->
     <section class="col-xs-12 col-sm-8 col-md-8 cadastro-curriculo">
-      <h2 class="new-h2-default">Cadastrar currículo</h2>
-      <form action="" method="" id="form-curriculo" enctype="multipart/form-data">
+      <h2 class="new-h2-default">Cadastrar currículo</h2>      
+      <form action="" method="" id="form-curriculo" enctype="multipart/form-data">      
         <fieldset>
-          <legend>Dados básicos</legend>
-            <div class="divisor">
+          <legend class="container-fluid">Dados básicos</legend>
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 divisor">
               <label for="nome">Nome</label>
               <input type="text" name="nome" id="nome">
             </div>
-            <div class="divisor">
+            <div class="col-md-6 col-sm-6 col-xs-12 divisor">
               <label for="email">E-mail</label>
               <input type="email" name="email" id="email">
             </div>
-            <div class="divisor">
+            <div class="col-md-6 col-sm-6 col-xs-12 divisor">
               <label for="cpf">CPF</label>
               <input type="text" name="cpf" id="cpf">
             </div>
-            <div class="divisor">
+            <div class="col-md-6 col-sm-6 col-xs-12 divisor">
               <label for="estado-civil">Estado civil</label>
               <select name="estado-civil" id="estado-civil">
                 <option value="0">Casado</option>
@@ -132,91 +133,114 @@
                 <option value="2">Viuvo(a)</option>
               </select>
             </div>
-            <div class="divisor">
-              <label for="nascimento">Data de nascimento</label>
-              <input type="date" id="nascimento" name="nascimento">
             </div>
-            <div class="divisor">
-              <label>Sexo</label>
-              <label for=""><input type="radio" name="genero" id="masculino" value="masculino">Masculino</label>
-               <label for=""><input type="radio" name="genero" id="feminino" value="feminino">Feminino</label>
+            <div class="row">
+              <div class="col-md-4 col-sm-4 col-xs-12 divisor">
+                <label for="nascimento">Data de nascimento</label>
+                <input type="date" id="nascimento" name="nascimento">
+              </div>
+              <div class="col-md-8 col-sm-8 col-xs-12 divisor radio-align">
+                <label>Sexo</label>
+                <label class="masc" for="masculino"><input type="radio" name="genero" id="masculino" value="masculino">MAS</label>
+                 <label class="fem" for="feminino"><input type="radio" name="genero" id="feminino" value="feminino">FEM</label>
+              </div>
             </div>
-            <div class="divisor">
-              <label for="endereco">Endereço</label>
-              <input type="text" name="endereco" id="endereco">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-12 divisor">
+                <label for="endereco">Endereço</label>
+                <input type="text" name="endereco" id="endereco">
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 divisor">
+                <label for="cep">CEP</label>
+                <input type="text" name="cep" id="cep">
+              </div>
             </div>
-            <div class="divisor">
-              <label for="cep">CEP</label>
-              <input type="text" name="cep" id="cep">
-            </div>
-            <div class="divisor">
+            <div class="row">
+            <div class="col-md-1 col-sm-6 col-xs-12 divisor">
               <label for="uf">UF</label>
               <input type="text" name="uf" id="uf">
             </div>
-            <div class="divisor">
+            <div class="col-md-5 col-sm-6 col-xs-12 divisor">
               <label for="cidade">Cidade</label>
               <input type="text" name="cidade" id="cidade">
             </div>
-             <div class="divisor">
+             <div class="col-md-3 col-sm-6 col-xs-12 divisor">
               <label for="telefone">Telefone</label>
               <input type="tel" name="telefone" id="telefone">
             </div>
-             <div class="divisor">
+             <div class="col-md-3 col-sm-6 col-xs-12 divisor">
               <label for="celular">Celular</label>
               <input type="tel" name="celular" id="celular">
             </div>
+          </div>
         </fieldset>
         <fieldset>
-          <legend>Dados profissionais</legend>       
-           <div class="divisor">
-              <label for="especialidade">Especialidade</label>
-              <input type="text" name="especialidade" id="especialidade">
+          <legend>Dados profissionais</legend>
+          <div class="row">     
+             <div class="col-md-6 col-sm-6 col-xs-12 divisor">
+                <label for="especialidade">Especialidade</label>
+                <input type="text" name="especialidade" id="especialidade">
+              </div>
+             <div class="col-md-6 col-sm-6 col-xs-12 divisor">
+                <label for="posicao-cargo">Estagiário/Advogado</label>
+                <select name="posicao-cargo" id="estado-civil">
+                  <option value="0">Estagiário</option>
+                  <option value="1">Advogado</option>                
+                </select>
+              </div>
             </div>
-           <div class="divisor">
-              <label for="posicao-cargo">Estagiário/Advogado</label>
-              <select name="posicao-cargo" id="estado-civil">
-                <option value="0">Estagiário</option>
-                <option value="1">Advogado</option>                
-              </select>
-            </div>
-            <div class="divisor">
+            <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 divisor">
               <label for="cargo-desejado">Cargo desejado</label>
               <input type="text" name="cargo-desejado" id="cargo-desejado">
             </div>
-             <div class="divisor">
+             <div class="col-md-6 col-sm-6 col-xs-12 divisor">
               <label for="resumo">Breve resumo</label>
               <input type="text" name="resumo" id="resumo">
             </div>
-            <div class="divisor">
+          </div>
+          <div class="row">
+            <div class="col-md-6 divisor">
               <label for="pretencao-salarial">Pretenção salarial</label>
               <input type="text" name="pretencao-salarial" id="pretencao-salarial">
             </div>
-        </fieldset>    
-        <fieldset>
-          <legend>Dados Idiomas</legend> 
-          <div class="divisor"> 
-            <ul class="language">
-               <li>Inglês</li>
-               <li> <label for=""><input type="radio" name="nivel" id="nivel" value="masculino">Não passuo</label></li>
-                <li> <label for=""><input type="radio" name="nivel" id="nivel" value="masculino">Básico</label></li>
-                <li> <label for=""><input type="radio" name="nivel" id="nivel" value="masculino">Intermediário</label></li>
-                <li> <label for=""><input type="radio" name="nivel" id="masculino" value="masculino">Avançado</label></li>
-            </ul>
-            <ul class="language">
-               <li>Espanhol</li>
-               <li> <label for=""><input type="radio" name="nivel" id="nivel" value="masculino">Não passuo</label></li>
-                <li> <label for=""><input type="radio" name="nivel" id="nivel" value="masculino">Básico</label></li>
-                <li> <label for=""><input type="radio" name="nivel" id="nivel" value="masculino">Intermediário</label></li>
-                <li> <label for=""><input type="radio" name="nivel" id="masculino" value="masculino">Avançado</label></li>
-            </ul>
           </div>
-          <div class="divisor">
-            <label for="outro-lingua">Outros idiomas</label>
-            <input type="text" name="outra-lingua">
-          </div>        
+        </fieldset>    
+        <fieldset class="idiomas">
+          <legend>Idiomas</legend> 
+          <div class="row">
+            <div class="col-md-9 col-sm-9 col-xs-12 divisor"> 
+              <ul class="language">
+                 <li>Inglês</li>
+                 <li> <label for=""><input type="radio" name="nivel" id="nivel" value="masculino">Não passuo</label></li>
+                  <li> <label for=""><input type="radio" name="nivel" id="nivel" value="masculino">Básico</label></li>
+                  <li> <label for=""><input type="radio" name="nivel" id="nivel" value="masculino">Intermediário</label></li>
+                  <li> <label for=""><input type="radio" name="nivel" id="masculino" value="masculino">Avançado</label></li>
+              </ul>
+              <ul class="language">
+                 <li>Espanhol</li>
+                 <li> <label for=""><input type="radio" name="nivel" id="nivel" value="masculino">Não passuo</label></li>
+                  <li> <label for=""><input type="radio" name="nivel" id="nivel" value="masculino">Básico</label></li>
+                  <li> <label for=""><input type="radio" name="nivel" id="nivel" value="masculino">Intermediário</label></li>
+                  <li> <label for=""><input type="radio" name="nivel" id="masculino" value="masculino">Avançado</label></li>
+              </ul>
+            </div>          
+            <div class="col-md-3 col-sm-3 col-xs-12 divisor">
+              <label for="outro-lingua" class="cl-vermelho">Outros idiomas</label>
+              <input type="text" name="outra-lingua">
+            </div>
+          </div>    
         </fieldset>
-      </form>
-      
+        <fieldset>
+          <div class="row">
+            <div class="col-md-12 divisor curriculo-file">
+              <h3>Currículo</h3>
+              <button id="vai">vai</button>
+              <input type="file" id="inputfile">
+            </div>
+          </div>
+        </fieldset>        
+      </form>      
     </section>
     <!-- Form area EMPRESA-->
     <section class="cadastro-empresa"></section>

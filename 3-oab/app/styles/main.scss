@@ -88,7 +88,7 @@ $cinza-escuro: #454545;
   color: $azul;
 }
 .cl-vermelho {
-  color: $vermelho;
+  color: $vermelho !important;
 }
 .pd-lr-0{
   padding-left: 0px;
@@ -136,7 +136,9 @@ $cinza-escuro: #454545;
   justify-content: $x-axis;
   align-items: $y-axis;
 }
-
+.center-height {
+  @include flex-position(row, wrap, flex-start, center);
+}
 /* Navbar */
 .main-nav {
   margin-bottom: 0px;
