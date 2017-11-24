@@ -8,19 +8,30 @@
 			font-size: 14px;			
 		}		
 		[type=text],[type=email], [type=tel],
-		 [type=date], select {
+		  [type=password], select {
 			height: 50px;
 			width: 100%;
 			font-size: 18px;
 			border: 1px solid #d8d8d8;
 			padding: 0px 5px;
 		}
-		
+		[type=submit] {
+			border: none;
+			background: $azul;
+			text-transform: uppercase;
+		}
+		[type=date] {
+			padding: 12px 4px;
+			width: 100%;
+			font-size: 18px;
+			border: 1px solid #d8d8d8;
+		}
 		fieldset {
 			legend {
 				border-bottom: none;
 				color: $vermelho;
 				font-size: 24px;
+				padding-left: 0px;
 			}
 			input[type=radio] {
 				margin-left: 15px;
@@ -41,7 +52,7 @@
 				 li {
 					display: inline-block;	
 					margin-right: 5px;
-					margin-bottom: 12px;	
+					margin-bottom: 2px;	
 					&:first-child {
 						color: $vermelho;
 						font-weight: 600;					
@@ -55,13 +66,48 @@
 					}
 				}
 			}
+			#inputfile {
+				display: none;
+			}
+			.curriculo-file {
+				margin-top: 70px;
+				.new-h2-default {
+					font-weight: 400;
+					font-size: 25px;
+				}
+				@include flex-position(row, wrap, space-between, center);
+			}
+			.upload-curriculo {			
+				position: relative;
+				button {
+					position: absolute;
+			    right: 20px;
+			    top: 5px;
+			    height: 40px;
+			    border: none;
+			    text-transform: uppercase;
+			    background: #24547e;
+			    border-radius: 10px;
+			    padding: 0px 20px;
+			    color: #fff;
+			    font-weight: 600;
+			    outline: none;
+				}
+			}
 		}
 		.divisor {			
-			padding-left: 0px;
+			// padding-left: 0px;
 			margin-bottom: 10px;		
 		}
 		.radio-align {
 			margin-top: 36px;
 		}
+	}
+}
+@media (max-width: 762px){
+	.cadastro .quick-menu ul {
+    width: 100% !important;
+    margin-bottom: 30px;
+    padding: 0px;
 	}
 }

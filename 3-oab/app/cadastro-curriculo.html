@@ -109,9 +109,9 @@
     <!-- Form area CURRICULO-->
     <section class="col-xs-12 col-sm-8 col-md-8 cadastro-curriculo">
       <h2 class="new-h2-default">Cadastrar currículo</h2>      
-      <form action="" method="" id="form-curriculo" enctype="multipart/form-data">      
+      <form action="" method="post" id="form-curriculo" enctype="multipart/form-data">      
         <fieldset>
-          <legend class="container-fluid">Dados básicos</legend>
+          <legend>Dados básicos</legend>
           <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12 divisor">
               <label for="nome">Nome</label>
@@ -156,11 +156,11 @@
               </div>
             </div>
             <div class="row">
-            <div class="col-md-1 col-sm-6 col-xs-12 divisor">
+            <div class="col-md-2 col-sm-6 col-xs-12 divisor">
               <label for="uf">UF</label>
               <input type="text" name="uf" id="uf">
             </div>
-            <div class="col-md-5 col-sm-6 col-xs-12 divisor">
+            <div class="col-md-4 col-sm-6 col-xs-12 divisor">
               <label for="cidade">Cidade</label>
               <input type="text" name="cidade" id="cidade">
             </div>
@@ -234,12 +234,32 @@
         <fieldset>
           <div class="row">
             <div class="col-md-12 divisor curriculo-file">
-              <h3>Currículo</h3>
-              <button id="vai">vai</button>
+              <h3 class="new-h2-default">Currículo</h3>
+              <div class="upload-curriculo col-md-8">
+                <input type="text" id="filename" placeholder="Envie seu currículo" readonly>
+                <button id="resumoupload">carregar</button>  
+              </div>              
               <input type="file" id="inputfile">
             </div>
           </div>
-        </fieldset>        
+        </fieldset>
+        <fieldset class="mt-50">
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 divisor">
+              <label for="email-login">E-mail</label>
+              <input type="email" id="email-login" name="email-login">
+            </div>          
+            <div class="col-md-3 col-sm-6 col-xs-12 divisor">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha">
+            </div>         
+            <div class="col-md-3 col-sm-6 col-xs-12 divisor">
+              <label for="confirmar-senha">Confirmar senha</label>
+              <input type="password" id="confirmar-senha" name="confirmar-senha">
+            </div>
+          </div>         
+        </fieldset>
+        <input class="mt-50 default-red-button" id="sendAll" type="submit" value="Realizar cadastro">  
       </form>      
     </section>
     <!-- Form area EMPRESA-->
