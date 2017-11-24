@@ -10,6 +10,6 @@ $(document).ready(function(){
 	    	nome = $(this).val();
 	    } 
 	    $('#filename').val(nome);
-	    console.log(nome);	  
+	    console.log(nome);
 	});
 });
