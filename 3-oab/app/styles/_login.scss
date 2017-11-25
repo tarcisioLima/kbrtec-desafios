@@ -2,8 +2,76 @@
 	font-family: 'Open Sans', sans-serif;
 	.login-area {
 		background: #f2f2f2;
-		#login {
-		margin: 0 auto;
+		margin-top: 50px;
+		padding: 20px;
+		h3 {
+			font-weight: 700;
+			font-size: 22px;
+			color: $vermelho;
+			text-align: center;
 		}
+		.info {
+			font-weight: 300;
+			font-size: 16px;
+			text-align: center;
+			display: block;
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
+		.box {
+			width: 30%;
+			margin: 0 auto;
+		}
+		
+		#login {
+			margin: 0 auto;
+			[type=text], [type=password] {
+				background: #fff;
+				height: 50px;
+				display: block;
+				width: 100%;
+				padding: 0px 15px;
+			    border: none;
+    			margin-bottom: 5px;
+			}
+			.nivel {
+				margin: 30px 0px;
+				@include flex-position(row, wrap, space-evenly, center);
+				label {
+					color: #af2623;
+					font-weight: 600;
+					[type=radio] {
+						margin: 0px;
+						transform: translate(5px, 2px);
+					}
+				}
+			}
+			.default-red-button {
+				width: 100%;
+				text-transform: uppercase;
+				text-align: center;
+				font-weight: 700;
+			}
+			.forgot {
+				display: block;
+			    margin-top: 30px;
+			    text-align: center;
+				font-size: 12px;
+				a {
+					font-weight: 700;
+					color: #d30600;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 970px) {
+	.login .login-area .box {
+		width: 50%;
+	}
+}
+@media (max-width: 750px) {
+	.login .login-area .box {
+		width: 95%;
 	}
 }
