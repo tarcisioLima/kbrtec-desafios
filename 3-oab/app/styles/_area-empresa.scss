@@ -48,19 +48,79 @@
 		}
 	}
 }
+@media (max-width: 768px) {
+	.header-empresa .header-items .logo-block {
+		img {
+			display: block;
+			margin: 0 auto;
+			float: unset;
+		}
+		.fst {
+			float: unset;
+			margin-left: unset;
+		}
+		p {
+			margin-left: unset;
+			float: none;
+			text-align: center;
+			display: block;
+			br {
+				display: none;
+			}
+		}
+	}
+	.header-empresa .header-items .titles {
+		justify-content: center;
+		h1 {
+			text-align: center;
+			font-size: 22px;			
+		}
+	}
+	.header-empresa .header-items .config {
+		flex-flow: column;
+    	margin-top: 20px;
+    	margin-bottom: 20px;
+    	.fa {
+    		font-size: 22px;	
+    	}
+	}
+}
+.show {
+	display: block;
+	transition: 0.5s;
+}
+.todown:before {
+	transform: rotate(90deg);
+}
 .sand-box {
 	font-family: 'Open Sans', sans-serif;	
 	nav {
 		background: #ededed;
-		color: #fff;		
-		ul {
+		color: #fff;
+		min-height: -webkit-fill-available;		
+		.main-list {
 			background: #af2623;
 			margin-left: -15px;
-    	margin-right: -15px;
+    		margin-right: -15px;
 			li {
 				min-height: 30px;
 				padding: 15px;
 				border-bottom: 1px solid #9c201d;
+				&:before {
+					content: "\f105";
+				    font-family: FontAwesome;
+				    margin-right: 12px;
+				    display: block;
+				    float: left;
+				}
+				.sublist {
+					display: none;
+					margin-top: 5px;
+					background: #9c201d;
+					li:before {
+						color: #ff1700;
+					}
+				}
 			}
 		}
 	}
@@ -106,11 +166,13 @@
 							background: #424242;
 							color: #fff;
 							text-align: center;
+							font-size: 15px;
 						}
 						&:nth-child(5) {
 							background: #af2623;
 							color: #fff;
 							text-align: center;
+							font-size: 15px;
 						}
 					}
 				}
@@ -121,6 +183,13 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.sand-box nav {
+		min-height: unset;
+	}
+}
+
 .footer-area-empresa {
 	font-family: 'Open Sans', sans-serif;
 	background: #24547e;
@@ -141,4 +210,9 @@
 }
 .body-content {
 	padding-bottom: 70px;
+}
+@media (max-width: 768px) {
+	.footer-area-empresa div:last-child {
+		display: none;
+	}
 }
