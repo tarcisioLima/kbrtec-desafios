@@ -1,0 +1,144 @@
+.header-empresa {
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	background-image: url('../images/area-empresa-header.jpg');
+	background-repeat: no-repeat;		
+	background-size: cover;	
+	.header-items {
+		display: flex;		
+		flex-direction: row;
+		flex-wrap: wrap;
+		.logo-block {
+			padding: 15px;
+			img {
+				float: left;				
+			}
+			.fst {
+				font-size: 16px;
+				display: block;
+				float: left;
+				margin-left: 25px;
+			}
+			.scnd {
+				clear: both;
+				font-size: 11px;
+				font-weight: 700;
+			}
+			p {
+				text-transform: uppercase;				
+				span {
+					font-weight: 700;					
+				}
+			}
+		}
+		.titles {
+			@include flex-position(row, wrap, start, center);				
+			h1 {
+				font-size: 25px;
+				margin: 0px;
+				font-weight: 600;
+			}
+		}
+		.config {
+			@include flex-position(row, wrap, space-evenly, center);
+			font-size: 14px;
+			.fa {
+				font-size: 18px;
+			}
+		}
+	}
+}
+.sand-box {
+	font-family: 'Open Sans', sans-serif;	
+	nav {
+		background: #ededed;
+		color: #fff;		
+		ul {
+			background: #af2623;
+			margin-left: -15px;
+    	margin-right: -15px;
+			li {
+				min-height: 30px;
+				padding: 15px;
+				border-bottom: 1px solid #9c201d;
+			}
+		}
+	}
+	main {
+		padding: 0px;
+		.breadcrumb {
+			background: #ededed;			
+			ul {
+				box-shadow: unset;
+			}
+		}
+		h2 {
+			color: #616161;
+			font-size: 25px;
+			font-weight: 600;
+		}
+		table {
+			margin-top: 30px;
+			width: 100%;
+			overflow-x: auto;
+			thead {
+				color: #737373;
+				// th {
+				// 	padding-left: 15px;
+				// }
+			}
+			tbody {
+				tr {					
+					td {
+						text-align: left;
+						padding: 20px;
+						border-bottom: 10px solid #fff;
+						&:nth-child(1) {
+							background: #f2f2f2;
+						}
+						&:nth-child(2) {
+							background: #ededed;
+						}
+						&:nth-child(3) {
+							background: #f2f2f2;
+						}
+						&:nth-child(4) {
+							background: #424242;
+							color: #fff;
+							text-align: center;
+						}
+						&:nth-child(5) {
+							background: #af2623;
+							color: #fff;
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+		.pagination {
+			margin-bottom: 50px;
+		}
+	}
+}
+.footer-area-empresa {
+	font-family: 'Open Sans', sans-serif;
+	background: #24547e;
+	height: 70px;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	span {
+		color: #fff;
+		text-align: center;
+		font-weight: 300;
+	}
+	div {
+		height: 100%;
+		@include flex-position();
+	}	
+}
+.body-content {
+	padding-bottom: 70px;
+}

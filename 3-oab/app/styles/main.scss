@@ -131,6 +131,10 @@ $cinza-escuro: #454545;
     transform: scale(1.1);
   }
 }
+.height-wrapper {
+  min-height: 100%;
+  position: relative;
+}
 @mixin flex-position($position: row, $wrap: wrap, $x-axis: center, $y-axis: center) {
   display: flex;
   flex-flow: $position $wrap;
@@ -760,3 +764,4 @@ $cinza-escuro: #454545;
 @import "links_downloads";
 @import "cadastro";
 @import "login";
+@import "area-empresa";
